@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>The Markdown Tutorial</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/skeleton.css">
+  <link rel="stylesheet" href="../css/sweet-alert.css">
+  <link rel="stylesheet" href="../css/fullPage.css">
+  <link rel="stylesheet" href="../css/points.css">
+  <link rel="stylesheet" href="../css/menu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div id="fullpage">
+  
+  <div id="footer">
+	<div class="dotstyle dotstyle-fillup">
+		<ul>
+			<li class="current"><a href="javascript:goToSlide(0);">1</a></li>
+			<li><a href="javascript:goToSlide(1);">2</a></li>
+			<li><a href="javascript:goToSlide(2);">3</a></li>
+			<li><a href="javascript:goToSlide(3);">4</a></li>
+		</ul>
+	</div>
+  </div>
+	
+	<div class="section links">
+		<!-- Links lesson. Intro Explanation  -->
+	    <div class="slide active">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<img src="../images/04.png" alt="04" />
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="twelve columns">&nbsp;</div>
+			  </div>
+			  <div class="row">
+				<div class="four columns">
+					<h2>Links</h2>
+					Markdown supports two style of links: inline and reference.<br/>
+						Inline links use parentheses to put the link's URL<br/>
+						Reference links use square brackets to put a label to identify the link and then, on another line, you define the URL in this way:<br/>
+						- The same identifier used previously inside square brackets<br/>
+						- Followed by a colon<br/>
+						- Followed by at least one space<br/>
+						- Followed by the URL for the link
+					<p>
+						In both types of links, the link text is delimited by square brackets. Click on the red points to know more.<br/>
+						<span class="instructions-no-touch">Move through the exercises by using the buttons or the dot menu at the bottom.</span>
+						<span class="instructions-touch">Move through the exercises by using the buttons or by swiping left or right.</span><br/>
+						<button class="button-primary button-next">Start exercises</button>
+					</p>
+				</div>
+				<div class="eight columns">
+					<div class="cd-product cd-container">
+						<div class="cd-product-wrapper">
+							<img src="../images/03.1.png" alt="[Text](http://http://example.com/ \"Title\")  [Text] [id]  [id]: http://example.com/  \"Title\"" />
+							<ul>
+								<li class="cd-single-point" style="top: 12%;left: 42%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>
+											You can also use relative URLs (like /example.html)
+										</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 12%;left: 78%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>
+											The title of the link is optional.
+										</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 36%;left: 12%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>Optionally use a space to separate the sets of brackets.</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 71%;left: 2%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-top">
+										<p>
+											This definition can be placed anywhere in the document (generally in the footer).
+										</p>
+										<p>Definition identifiers may consist of letters, numbers, spaces, and punctuation. They are not case sensitive.</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 71%;left: 72%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-top">
+										<p>
+											The title of the link is optional.
+										</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+							</ul>
+						</div>
+					</div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Links lesson. First exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Link the text "University of Rwanda" to http://www.ur.ac.rw</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<textarea id="editor_3-1" class="editor">The University of Rwanda was formed in 2013 through the merger of Rwanda's seven public institutions of higher education.</textarea>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_3-1" class="render-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<input id="ck_show_html_3-1" type="checkbox" class="show-html" /> Show generated HTML?
+				</div>
+				<div class="six columns">
+					<div id="html_pad_3-1" class="html-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<p><button id="btn_answer_3-1" class="button-primary button-answer">Show me the answer</button></p>
+					<p><button class="button-primary button-previous u-full-width">Go to the beginning</button>
+					<button class="button-primary button-next u-full-width">Next Exercise</button></p>
+				</div>
+				<div class="six columns">
+					<!-- empty -->
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Links lesson. Second exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Link the words "hurricane" to http://en.wikipedia.org/w/index.php?title=Hurricane with one reference link.</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<textarea id="editor_3-2" class="editor">Hurricane Erika was the strongest and longest-lasting tropical cyclone in the 1997 Atlantic hurricane season.</textarea>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_3-2" class="render-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<input id="ck_show_html_3-2" type="checkbox" class="show-html" /> Show generated HTML?
+				</div>
+				<div class="six columns">
+					<div id="html_pad_3-2" class="html-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<p><button id="btn_answer_3-2" class="button-primary button-answer">Show me the answer</button></p>
+					<p><button class="button-primary button-previous u-full-width">Previous Exercise</button>
+					<button class="button-primary button-next u-full-width">Next Exercise</button></p>
+				</div>
+				<div class="six columns">
+					<!-- empty -->
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Links lesson. Third exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Play with the concepts you just learned!</p>
+					<p>For example: <br/>
+					Can you really place the link definition of a reference link anywhere?<br/>
+					Test for yourself if the link identifier of a reference link is not case sensitive<br/>
+					Can you use bold and italics in a link? Or turn a header into a link?</p>
+					<p>See the generated HTML. Even if you don't know HTML, try to understand what's happening. Go wild!<br/>
+					Go to the next lesson when you're ready.
+					</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<textarea id="editor_3-3" class="editor"></textarea>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_3-3" class="render-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<input id="ck_show_html_3-3" type="checkbox" class="show-html" /> Show generated HTML?
+				</div>
+				<div class="six columns">
+					<div id="html_pad_3-3" class="html-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<p><button class="button-primary button-previous u-full-width">Previous Exercise</button>
+					<a href="images.html" id="btn_answer_3-3" class="button button-primary button-next-lesson u-full-width">Go to the next lesson</a></p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+				</div>
+				<div class="six columns">
+					<!-- empty -->
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/4.3.0/markdown-it.min.js"></script>
+  <script src="../js/jquery.mobile.custom.min.js"></script>
+  <script src="../js/modernizr.js"></script>
+  <script src="../js/sweet-alert.min.js"></script>
+  <script src="../js/nanobar.min.js"></script>
+  <script src="../js/exercises.js"></script>
+  <script src="../js/setup.js"></script>
+  <script src="../js/doT.min.js"></script>
+  <script src="../js/menu.js"></script>
+  
+  <script type="text/javascript">	
+	var CURRENT_SECTION = 3;
+  </script>
+</body>
+</html>

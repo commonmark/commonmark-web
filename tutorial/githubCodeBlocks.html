@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>The Markdown Tutorial</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/skeleton.css">
+  <link rel="stylesheet" href="../css/sweet-alert.css">
+  <link rel="stylesheet" href="../css/fullPage.css">
+  <link rel="stylesheet" href="../css/points.css">
+  <link rel="stylesheet" href="../css/menu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div id="fullpage">
+  
+  <div id="footer">
+	<div class="dotstyle dotstyle-fillup">
+		<ul>
+			<li class="current"><a href="javascript:goToSlide(0);">1</a></li>
+			<li><a href="javascript:goToSlide(1);">2</a></li>
+			<li><a href="javascript:goToSlide(2);">3</a></li>
+		</ul>
+	</div>
+  </div>
+	
+	<div class="section githubCodeBlocks">
+		<!-- Github Code Blocks lesson. Intro Explanation  -->
+	    <div class="slide active">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<img src="../images/13.png" alt="13" />
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="twelve columns">&nbsp;</div>
+			  </div>
+			  <div class="row">
+				<div class="four columns">
+					<h2>Github Code Blocks</h2>
+					<p>
+						Github supports what is called fenced blocks where you wrap the code with three backtick quotes (```) so you won't need to indent it by four spaces.<br/>
+						Github also supports syntax highlighting by adding an optional language identifier.
+					</p>
+					<p class="instructions-no-touch">Click on the red points to know more. Move through the exercises by using the buttons or the dot menu at the bottom.</p>
+					<p class="instructions-touch">Click on the red points to know more. Move through the exercises by using the buttons or by swiping left or right.</p>
+					<p><button class="button-primary button-next">Start exercises</button></p>
+				</div>
+				<div class="eight columns">
+					<div class="cd-product cd-container">
+						<div class="cd-product-wrapper">
+							<img src="../images/12.1.png" alt="```function test() { console.log(’Hi’); } ``` ```javascript function test() { console.log(’Hi’); } ```" />
+							<ul>
+								<li class="cd-single-point" style="top: 5%;left: 1%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>There's no space between the backtick quotes.</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+								<li class="cd-single-point" style="top: 47%;left: 18%;">
+									<a class="cd-img-replace" href="#">More</a>
+									<div class="cd-more-info cd-left">
+										<p>You can see which keywords are valid in the <a target="_blank" href="https://github.com/github/linguist/blob/master/lib/linguist/languages.yml">the languages YAML file</a> of <a target="_blank" href="https://github.com/github/linguist">Linguist</a>.</p>
+										<a href="#" class="cd-close-info cd-img-replace">Close</a>
+									</div>
+								</li> <!-- .cd-single-point -->
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Github Code Blocks lesson. First exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Format the following Ruby code with the Github syntax highlighting. <i>Hint: </i>ruby<i> is the language identifier</i></p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<textarea id="editor_12-1" class="editor"># Generates array of primes up to the square root of N
+ 
+primes = [2,3]
+ 
+(4..Math.sqrt(N).floor).each do |i|
+	(0..primes.length-1).each do |j|
+		if i % primes[j] == 0
+			isitprime = 0
+			break
+		else 
+			isitprime = 1
+		end		
+		end
+	if isitprime == 1
+		primes << i
+	end
+end</textarea>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_12-1" class="render-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<input id="ck_show_html_12-1" type="checkbox" class="show-html" /> Show generated HTML?
+				</div>
+				<div class="six columns">
+					<div id="html_pad_12-1" class="html-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<p><button id="btn_answer_12-1" class="button-primary button-answer">Show me the answer</button></p>
+					<p><button class="button-primary button-previous u-full-width">Go to the beginning</button>
+					<button class="button-primary button-next u-full-width">Next Exercise</button></p>
+				</div>
+				<div class="six columns">
+					<!-- empty -->
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<!-- Github Code Blocks Second exercise  -->
+		<div class="slide">
+			<div class="container">
+			  <div class="row">
+				<div class="twelve columns">
+					<p>Play with the concepts you just learned!</p>
+					<p>For example: <br/>
+					Try code snippets from different languages (not all languages are supported here, just the more popular).</p>
+					<p>See the generated HTML. Even if you don't know HTML, try to understand what's happening. Go wild!<br/>
+					Go to the next lesson when you're ready.
+					</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<textarea id="editor_12-2" class="editor"></textarea>
+				</div>
+				<div class="six columns">
+					<div id="render_pad_12-2" class="render-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<input id="ck_show_html_12-2" type="checkbox" class="show-html" /> Show generated HTML?
+				</div>
+				<div class="six columns">
+					<div id="html_pad_12-2" class="html-pad"></div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="six columns">
+					<p><button class="button-primary button-previous u-full-width">Previous Exercise</button>
+					<a href="redditSuperscript.html" id="btn_answer_12-2" class="button button-primary button-next-lesson u-full-width">Go to the next lesson</a></p>
+				</div>
+				<div class="six columns">
+					<!-- empty -->
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/4.3.0/markdown-it.min.js"></script>
+  <script src="../js/jquery.mobile.custom.min.js"></script>
+  <script src="../js/modernizr.js"></script>
+  <script src="../js/sweet-alert.min.js"></script>
+  <script src="../js/nanobar.min.js"></script>
+  <script src="../js/exercises.js"></script>
+  <script src="../js/setup.js"></script>
+  <script src="../js/doT.min.js"></script>
+  <script src="../js/menu.js"></script>
+  
+  <script type="text/javascript">	
+	var CURRENT_SECTION = 12;
+  </script>
+</body>
+</html>
