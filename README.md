@@ -1,7 +1,7 @@
-# markdowntutorial
+# markdownhelp
 Markdown Tutorial and Reference
 
-See it [here](http://eh3rrera.github.io/markdowntutorial/)
+See it [here](http://commonmark.org/help/)
 
 Everything is plain old HTML/CSS/Javascript with jQuery. Just download and open in a browser.
 
