@@ -1,434 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>The Markdown Tutorial</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/style.css">
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="icon" type="image/png" href="/images/markdown-mark-apple-touch.png">
+    <link rel="apple-touch-icon" type="image/png" href="/images/markdown-mark-apple-touch.png">
+    <title>CommonMark</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
+    <div id="container">
+        <section class="inner">
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-		<div class="twelve columns" style="margin-top: 5%">
-			<h1 class="center">Markdown Tutorial</h1>
-			<p class="center">An interactive tutorial to learn Markdown’s syntax.</p>
-		</div>
-	</div>
-	  
-	<div class="row">
-		<div class="twelve columns center" style="margin-top: 2%">
-			<a class="button" href="tutorial/index.html" target="_blank">Start</a>
-		</div>
-	</div>
-		
-	<div class="row">
-		<div class="twelve columns center" style="margin-top: 5%">
-		
-			<h1 class="center">Reference</h1>
-			<ul class="tabs">
-				<li><a class="active" href="#common">Common</a></li>
-				<li><a href="#github">Github</a></li>
-				<li><a href="#reddit">Reddit</a></li>
-			</ul>
-		
-			<ul class="tabs-content">
-				<!-- Common Markdown Reference
-				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-				<li class="active" id="commonTab">
-		
-					<table class="u-full-width">
-					  <thead>
-						<tr>
-						  <th>Result</th>
-						  <th>Markdown</th>
-						  <th>&nbsp;</th>
-						</tr>
-					  </thead>
-					  <tbody>
-						<tr>
-						  <td><em>Emphasis</em></td>
-						  <td><span class="font-big-aligned">*</span>Emphasis<span class="font-big-aligned">*</span></td>
-						  <td><span class="font-big">_</span>Emphasis<span class="font-big">_</span></td>
-						</tr>
-						<tr>
-						  <td><strong>Bold</strong></td>
-						  <td><span class="font-big-aligned">**</span>Bold<span class="font-big-aligned">**</span></td>
-						  <td><span class="font-big">__</span>Bold<span class="font-big">__</span></td>
-						</tr>
-						<tr>
-						  <td><h1>Heading 1</h1></td>
-						  <td># Heading 1</td>
-						  <td>
-							Heading 1<br/>
-							=========
-						  </td>
-						</tr>
-						<tr>
-						  <td><h2>Heading 2</h2></td>
-						  <td>## Heading 2</td>
-						  <td>
-							Heading 2<br/>
-							---------
-						  </td>
-						</tr>
-						<tr>
-						  <td><a href="http://commonmark.org/">Link</a></td>
-						  <td>[Link](http://commonmark.org)</td>
-						  <td>[Link][url_id]<br/>. . .<br/>[url_id]:http://commonmark.org</td>
-						</tr>
-						<tr>
-						  <td><img src="http://commonmark.org/images/markdown-mark.png" width="36" height="22" alt="Markdown" /></td>
-						  <td>![Markdown](http://url/image.png)</td>
-						  <td>![Markdown][a_image]<br/>. . .<br/>[a_image]:http://url/image.png</td>
-						</tr>
-						<tr>
-						  <td>Inline <code>code</code> with backticks</td>
-						  <td>Inline <span class="font-big-aligned">`</span>code<span class="font-big-aligned">`</span> with backticks</td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td>
-							<div class="code-block">
-								#Either use<br/>
-								print 'Three backticks.'<br/>
-								print 'Or indent four spaces.'
-							</div>
-						  </td>
-						  <td>
-							<span class="font-big-aligned" style="vertical-align:bottom;line-height:0.1em">```</span><br/>
-							#Either use<br/>
-							print 'Three backticks.'<br/>
-							print 'Or indent four spaces.'<br/>
-							<span class="font-big-aligned">```</span>
-						  </td>
-						  <td>
-							&nbsp;&nbsp;&nbsp;&nbsp;#Either use<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;print 'Three backticks.'<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;print 'Or indent four spaces.'
-						  </td>
-						</tr>
-						<tr>
-						  <td><blockquote>Blockquote</blockquote></td>
-						  <td><strong>&gt;</strong>Blockquote</td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td>This is a paragraph.<br/><br/>This is a paragraph after one blank line.</td>
-						  <td>
-							This is a paragraph.<br/><br/>This is a paragraph after one blank line.
-						  </td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td>
-							<ul>
-								<li>Item</li>
-								<li>Item</li>
-								<li>Item</li>
-							</ul>
-						  </td>
-						  <td>
-							<p style="line-height: 1.6em">
-								<span class="font-big-aligned">*</span> Item<br/><span class="font-big-aligned">*</span> Item<br/><span class="font-big-aligned">*</span> Item
-							</p>
-						  </td>
-						  <td>
-							<p style="line-height: 1.6em">
-								(You can also use <span class="font-big-aligned">+</span> or <span class="font-big">-</span> instead of <span class="font-big-aligned">*</span>)
-							</p>
-						  </td>
-						</tr>
-						<tr>
-						  <td>
-							<ol>
-								<li>One</li>
-								<li>Two</li>
-								<li>Three</li>
-							</ol>
-						  </td>
-						  <td>
-							<p style="line-height: 1.6em">
-								1. One<br/>2. Two<br/>3. Three
-							</p>
-						  </td>
-						  <td>
-							<p style="line-height: 1.6em">
-								1) One<br/>2) Two<br/>3) Three
-							</p>
-						  </td>
-						</tr>
-						<tr>
-						  <td>
-							<ul>
-								<li>
-									Item
-									<ol>
-										<li>This is indented four spaces</li>
-										<li>This is indented four spaces</li>
-									</ol>
-								</li>
-								<li>
-									Item
-									<ul>
-										<li>This is indented four spaces</li>
-										<li>This is indented four spaces</li>
-									</ul>
-								</li>
-								<li>Item</li>
-							</ul>
-						  </td>
-						  <td>
-							<p style="line-height: 1.6em">
-								<span class="font-big-aligned">*</span> Item<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;1. This is indented four spaces<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;2. This is indented four spaces<br/>
-								<span class="font-big-aligned">*</span> Item<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="font-big-aligned">*</span> This is indented four spaces<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="font-big-aligned">*</span> This is indented four spaces<br/>
-								<span class="font-big-aligned">*</span> Item
-							</p>
-						  </td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td>
-							<hr class="custom-hr"/>
-							I'm between two rules!
-							<hr class="custom-hr"/>
-						  </td>
-						  <td>
-							---<br/>
-							I'm between two rules!<br/>
-							---
-						  </td>
-						  <td>
-							<span class="font-big-aligned">*</span><span class="font-big-aligned">*</span><span class="font-big-aligned">*</span><br/>
-							I'm between two rules!<br/>
-							<span class="font-big-aligned">*</span><span class="font-big-aligned">*</span><span class="font-big-aligned">*</span>
-						  </td>
-						</tr>
-					  </tbody>
-					</table>
-		
-				</li>
-				
-				<!-- Github Markdown Reference
-				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-				<li id="githubTab">
-					<table class="u-full-width">
-					  <thead>
-						<tr>
-						  <th>Result</th>
-						  <th>Markdown</th>
-						  <th>&nbsp;</th>
-						</tr>
-					  </thead>
-					  <tbody>
-						<tr>
-						  <td><a href="http://github.com">http://github.com</a></td>
-						  <td>http://github.com</td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td><del>Strikethrough</del></td>
-						  <td><span class="font-big">~~</span>Strikethrough<span class="font-big">~~</span></td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td>
-							<div class="code-block">
-								<strong>String</strong> s1 = <span style="color:#800">"Syntax highlighting"</span>;<br/>
-								System.out.println(s1);
-							</div>
-						  </td>
-						  <td>
-						  
-							<span class="font-big-aligned" style="vertical-align:bottom;line-height:0.1em">```</span>java<br/>
-							String s1 = "Syntax highlighting";<br/>
-							System.out.println(s1);<br/>
-							<span class="font-big-aligned">```</span>
-							
-						  </td>
-						  <td>(See all languages supported <a href="https://github.com/github/linguist/blob/master/lib/linguist/languages.yml">here</a>)</td>
-						</tr>
-						<tr>
-						  <td>
-							<table>
-								<thead>
-									<tr>
-										<th style="text-align:left">Left-Aligned</th>
-										<th style="text-align:center">Center Aligned</th>
-										<th style="text-align:right">Right Aligned</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td style="text-align:left">hyphens first row</td>
-										<td style="text-align:center">pipes for</td>
-										<td style="text-align:right">columns</td>
-									</tr>
-									<tr style="background:#eee">
-										<td style="text-align:left">colons in</td>
-										<td style="text-align:center">the first row</td>
-										<td style="text-align:right">to align</td>
-									</tr>
-									<tr>
-										<td style="text-align:left">zebra stripes</td>
-										<td style="text-align:center">added</td>
-										<td style="text-align:right">automatically</td>
-									</tr>
-								</tbody>
-							</table>
-						  </td>
-						  <td colspan="2">
-							| Left-Aligned  | Center Aligned  | Right Aligned |<br/>
-							| :---------------- |:------------:| --------:|<br/>
-							| hyphens first row | pipes for | columns |<br/>
-							| colons in      | the first row        |   to align |<br/>
-							| zebra stripes | added        |    automatically |
-						  </td>
-						</tr>
-						<tr>
-							<td>
-								<input type="checkbox" disabled /> a task<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" disabled /> a subtask<br/>
-								<input type="checkbox" checked="checked" disabled />  a completed task
-							</td>
-							<td>- [ ] a task<br/>
-								&nbsp;&nbsp;- [ ] a subtask<br/>
-								- [x] a completed task
-							</td>
-							<td>&nbsp;</td>
-						</tr>
-					  </tbody>
-					</table>
-				</li>
-				
-				
-				<!-- Reddit Markdown Reference
-				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-				<li id="redditTab">
-					<table class="u-full-width">
-					  <thead>
-						<tr>
-						  <th>Result</th>
-						  <th>Markdown</th>
-						  <th>&nbsp;</th>
-						</tr>
-					  </thead>
-					  <tbody>
-						<tr>
-						  <td>Superscript<sup>text</sup></td>
-						  <td>super^script</td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td>Superscript<sup>text with spaces</sup></td>
-						  <td>super^(script with spaces)</td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td><a href="http://reddit.com">http://reddit.com</a></td>
-						  <td>http://reddit.com</td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td><del>Strikethrough</del></td>
-						  <td><span class="font-big">~~</span>Strikethrough<span class="font-big">~~</span></td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td>
-							<table>
-								<thead>
-									<tr>
-										<th style="text-align:left">Left-Aligned</th>
-										<th style="text-align:center">Center Aligned</th>
-										<th style="text-align:right">Right Aligned</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td style="text-align:left">hyphens first row</td>
-										<td style="text-align:center">pipes for</td>
-										<td style="text-align:right">columns</td>
-									</tr>
-									<tr>
-										<td style="text-align:left">colons in</td>
-										<td style="text-align:center">the first row</td>
-										<td style="text-align:right">to align</td>
-									</tr>
-									<tr>
-										<td style="text-align:left">another</td>
-										<td style="text-align:center">table</td>
-										<td style="text-align:right">row</td>
-									</tr>
-								</tbody>
-							</table>
-						  </td>
-						  <td colspan="2">
-							| Left-Aligned  | Center Aligned  | Right Aligned |<br/>
-							| :---------------- |:------------:| --------:|<br/>
-							| hyphens first row | pipes for | columns |<br/>
-							| colons in      | the first row        |   to align |<br/>
-							| another | table        |    row |
-						  </td>
-						</tr>
-					  </tbody>
-					</table>
-				</li>
-			</ul>
-		</div>
+            <header>
+                <h1>CommonMark</h1>
+                <h2>A strongly defined, highly compatible specification of Markdown</h2>
+            </header>
+
+
+            <section id="main_content">
+                <h2>
+                    <a id="what" class="anchor" href="#what"></a>What is Markdown?
+                </h2>
+
+                <p>
+                    It’s a plain text format for writing structured documents, based on formatting conventions from email and usenet.
+                    </p>
+                <p>
+                    <a href="//commonmark.org/help/" class="button-primary">Learn Markdown in 60 Seconds</a>
+                </p>    
+
+                <h2>
+                    <a id="created" class="anchor" href="#what"></a>Who created Markdown?
+                </h2>                    
+                <p>
+                    It was <a href="https://en.wikipedia.org/wiki/Markdown#History">developed in 2004 by John Gruber</a>, who wrote the first markdown-to-html converter in Perl, and it soon became widely used in websites. By 2014 there were dozens of implementations in many languages.
+                </p>
+
+                <h2>
+                    <a id="why" class="anchor" href="#why"></a>Why is CommonMark needed?
+                </h2>
+
+                <p>
+                    John Gruber’s <a href="http://daringfireball.net/projects/markdown/syntax">canonical description of Markdown’s syntax</a> does not specify the syntax unambiguously.
+                </p>
+                <p>
+                    In the absence of a spec, early implementers consulted the original <code>Markdown.pl</code> code to resolve these ambiguities. But <code>Markdown.pl</code> was quite buggy, and gave manifestly bad results in many cases, so it was not a satisfactory replacement for a spec. <code>Markdown.pl</code> was last updated December 17<small>th</small>, 2004.
+                <p>
+                    Because there is no unambiguous spec, implementations have diverged considerably over the last 10 years. As a result, users are often surprised to find that a document that renders one way on one system (say, a GitHub wiki) renders differently on another (say, converting to docbook using Pandoc). To make matters worse, because nothing in Markdown counts as a “syntax error,” the divergence often isn’t discovered right away.
+                </p>
+                <p>
+                    There’s no standard test suite for Markdown;  <a href="https://github.com/michelf/mdtest/">MDTest</a> is the closest thing we have. The only way to resolve Markdown ambiguities and inconsistencies is <a href="http://johnmacfarlane.net/babelmark2/">Babelmark</a>, which compares the output of 20+ implementations of Markdown against each other to see if a consensus emerges.
+                </p>
+                <p>
+                    We propose a <strong>standard, unambiguous syntax specification for Markdown</strong>, along with a <strong>suite of comprehensive tests</strong> to validate Markdown implementations against this specification. We believe this is necessary, even essential, for the future of Markdown.
+                </p>
+
+                <p>
+                    That’s what we call <strong>CommonMark</strong>.  <img src="images/markdown-mark.png" height="22" width="36" alt="Markdown Logo" style="vertical-align:top" />
+                </p>
+                <p>
+
+                </p>
+                <h2>
+                    <a id="who" class="anchor" href="#who"></a>Who are you?
+                </h2>
+
+                <p>We’re a group of Markdown fans who either work at companies with industrial scale deployments of Markdown, have written Markdown parsers, have extensive experience supporting Markdown with end users &ndash; or all of the above. </p>
+                <ul>
+                    <li><strong>John MacFarlane</strong>, jgm@berkeley.edu</li>
+                    <li><strong>David Greenspan</strong>, david@meteor.com</li>
+                    <li><strong>Vicent Marti</strong>, vicent@github.com</li>
+                    <li><strong>Neil Williams</strong>, neil@reddit.com</li>
+                    <li><strong>Benjamin Dumke-von der Ehe</strong>, ben@stackexchange.com</li>
+                    <li><strong>Jeff Atwood</strong>, jatwood@codinghorror.com</li>
+                </ul>
+
+                <h2>
+                    <a id="how" class="anchor" href="#how"></a>How can I help?
+                </h2>
+
+                <p>Exercise our <a href="http://code.commonmark.org/">reference implementations</a>, or <a href="https://github.com/jgm/CommonMark/wiki/List-of-CommonMark-Implementations">find a community implementation</a> in your preferred environment or language. Provide <a href="http://talk.commonmark.org"></a>feedback!</p>
+
+                <p>If a CommonMark implementation does not already exist in your preferred environment or language, try <strong>implementing your own CommonMark parser</strong>. One of our major goals is to <a href="http://spec.commonmark.org/">strongly specify Markdown</a>, and to eliminate the many old inconsistencies and ambiguities that made using Markdown so difficult. Did we succeed?</p>
+
+                <h2>
+                    <a id="where" class="anchor" href="#where"></a>Where can I find it?
+                </h2>
+
+                <h3>
+                    <a href="http://spec.commonmark.org/">spec.commonmark.org</a>
+                </h3>
+                <p>
+                    The CommonMark specification.
+                </p>
+                <h3>
+                    <a href="http://code.commonmark.org/">code.commonmark.org</a>
+                </h3>
+                <p>
+                    Reference implementation and validation test suite on GitHub.
+                </p>
+                <h3>
+                    <a href="http://talk.commonmark.org/">talk.commonmark.org</a>
+                </h3>
+                <p>
+                    Public discussion area and mailing list via <a href="http://www.discourse.org">Discourse</a>.
+                </p>
+                <h3>
+                    <a href="http://commonmark.org/help">commonmark.org/help</a>
+                </h3>
+                <p>
+                    Quick reference card and interactive tutorial for learning Markdown.
+                </p>
+                <h3>
+                    <a href="http://try.commonmark.org/">try.commonmark.org</a>
+                </h3>
+                <p>
+                    Live testing tool powered by the reference implementation.
+                </p>
+
+                <h2>
+                    <a id="when" class="anchor" href="#when"></a>When is the spec final?
+                </h2>
+                <p>
+                    The current version of the CommonMark spec is complete, and quite robust after a year of public feedback &hellip; but not quite final.
+                </p>
+                <p>
+                    With your help, we plan to announce a finalized 1.0 spec and test suite in early 2016.
+                </p>
+            </section>
+            <p><span style="color:maroon">&lt;3</span></p>
+        </section>
+        
     </div>
-	
-	<div class="row">
-		<div class="twelve columns">
-			<p><small>Created by <a href="https://twitter.com/eh3rrera" target="_blank">Esteban Herrera</a>. The <a href="https://github.com/eh3rrera/markdowntutorial" target="_blank">code</a> of this page is MIT licensed.<br />
-			I want to thank (in no special order) <a href="https://twitter.com/gjtorikian" target="_blank">Garen Torikian</a> for his <a href="http://markdowntutorial.com/" target="_blank">Markdown Tutorial</a>, which helped me as an inspiration to create this reference and tutorial. <a href="https://twitter.com/dhg" target="_blank">Dave Gamache</a> for his simple and elegant framework <a href="http://getskeleton.com/" target="_blank">Skeleton</a>, <a href="https://github.com/olado" target="_blank">Laura Doktorova</a> for her great javascript template engine <a href="http://olado.github.io/doT/index.html" target="_blank">doT.js</a>, <a href="http://jacoborus.codes/" target="_blank">Jacobo Tabernero</a> for his useful plugin <a href="http://nanobar.micronube.com/" target="_blank">nanobar</a>. <a href="https://github.com/rlidwka" target="_blank">Alex Kocharin</a> and <a href="https://github.com/puzrin" target="_blank">Vitaly Puzrin</a> for the awesome JS library <a href="https://github.com/markdown-it/markdown-it" target="_blank">markdown-it</a>. Scott McClaugherty for <a href="https://github.com/gamefreak/snuownd" target="_blank">SnuDown</a> a great javascript port of Reddit's markdown parser. <a href="http://tristanedwards.me" target="_blank">Tristan Edwards</a> for his great plug-in <a href="https://github.com/t4t5/sweetalert" target="_blank">Sweet-Alert</a>. All the great <a href="https://github.com/isagalaev/highlight.js/blob/master/AUTHORS.en.txt" target="_blank">people</a> behind <a href="https://github.com/isagalaev/highlight.js" target="_blank">highlight.js</a>. And last but not least, the awesome guys behind <a href="http://codyhouse.co" target="_blank">Codyhouse</a> for their articles.</small></p> 
-		</div>
-	</div>
-	
-  </div>
-
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  
-  
-  
-  <!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script src="js/tabs.js"></script>
-  <script src="js/nanobar.min.js"></script>
-  
-	<script type="text/javascript">
-		var nanobar = new Nanobar( {id:'bar', bg:'#000'} );
-		nanobar.go( 99.99999 );
-	</script>
 </body>
 </html>
