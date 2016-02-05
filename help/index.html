@@ -1,434 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>The Markdown Tutorial</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <meta charset="utf-8">
+    <title>Markdown Reference</title>
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/style.css">
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize-skeleton.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
+
 <body>
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-		<div class="twelve columns" style="margin-top: 5%">
-			<h1 class="center">Markdown Tutorial</h1>
-			<p class="center">An interactive tutorial to learn Markdown’s syntax.</p>
-		</div>
-	</div>
-	  
-	<div class="row">
-		<div class="twelve columns center" style="margin-top: 2%">
-			<a class="button" href="tutorial/index.html" target="_blank">Start</a>
-		</div>
-	</div>
-		
-	<div class="row">
-		<div class="twelve columns center" style="margin-top: 5%">
-		
-			<h1 class="center">Reference</h1>
-			<ul class="tabs">
-				<li><a class="active" href="#common">Common</a></li>
-				<li><a href="#github">Github</a></li>
-				<li><a href="#reddit">Reddit</a></li>
-			</ul>
-		
-			<ul class="tabs-content">
-				<!-- Common Markdown Reference
-				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-				<li class="active" id="commonTab">
-		
-					<table class="u-full-width">
-					  <thead>
-						<tr>
-						  <th>Result</th>
-						  <th>Markdown</th>
-						  <th>&nbsp;</th>
-						</tr>
-					  </thead>
-					  <tbody>
-						<tr>
-						  <td><em>Emphasis</em></td>
-						  <td><span class="font-big-aligned">*</span>Emphasis<span class="font-big-aligned">*</span></td>
-						  <td><span class="font-big">_</span>Emphasis<span class="font-big">_</span></td>
-						</tr>
-						<tr>
-						  <td><strong>Bold</strong></td>
-						  <td><span class="font-big-aligned">**</span>Bold<span class="font-big-aligned">**</span></td>
-						  <td><span class="font-big">__</span>Bold<span class="font-big">__</span></td>
-						</tr>
-						<tr>
-						  <td><h1>Heading 1</h1></td>
-						  <td># Heading 1</td>
-						  <td>
-							Heading 1<br/>
-							=========
-						  </td>
-						</tr>
-						<tr>
-						  <td><h2>Heading 2</h2></td>
-						  <td>## Heading 2</td>
-						  <td>
-							Heading 2<br/>
-							---------
-						  </td>
-						</tr>
-						<tr>
-						  <td><a href="http://commonmark.org/">Link</a></td>
-						  <td>[Link](http://commonmark.org)</td>
-						  <td>[Link][url_id]<br/>. . .<br/>[url_id]:http://commonmark.org</td>
-						</tr>
-						<tr>
-						  <td><img src="http://commonmark.org/images/markdown-mark.png" width="36" height="22" alt="Markdown" /></td>
-						  <td>![Markdown](http://url/image.png)</td>
-						  <td>![Markdown][a_image]<br/>. . .<br/>[a_image]:http://url/image.png</td>
-						</tr>
-						<tr>
-						  <td>Inline <code>code</code> with backticks</td>
-						  <td>Inline <span class="font-big-aligned">`</span>code<span class="font-big-aligned">`</span> with backticks</td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td>
-							<div class="code-block">
-								#Either use<br/>
-								print 'Three backticks.'<br/>
-								print 'Or indent four spaces.'
-							</div>
-						  </td>
-						  <td>
-							<span class="font-big-aligned" style="vertical-align:bottom;line-height:0.1em">```</span><br/>
-							#Either use<br/>
-							print 'Three backticks.'<br/>
-							print 'Or indent four spaces.'<br/>
-							<span class="font-big-aligned">```</span>
-						  </td>
-						  <td>
-							&nbsp;&nbsp;&nbsp;&nbsp;#Either use<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;print 'Three backticks.'<br/>
-							&nbsp;&nbsp;&nbsp;&nbsp;print 'Or indent four spaces.'
-						  </td>
-						</tr>
-						<tr>
-						  <td><blockquote>Blockquote</blockquote></td>
-						  <td><strong>&gt;</strong>Blockquote</td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td>This is a paragraph.<br/><br/>This is a paragraph after one blank line.</td>
-						  <td>
-							This is a paragraph.<br/><br/>This is a paragraph after one blank line.
-						  </td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td>
-							<ul>
-								<li>Item</li>
-								<li>Item</li>
-								<li>Item</li>
-							</ul>
-						  </td>
-						  <td>
-							<p style="line-height: 1.6em">
-								<span class="font-big-aligned">*</span> Item<br/><span class="font-big-aligned">*</span> Item<br/><span class="font-big-aligned">*</span> Item
-							</p>
-						  </td>
-						  <td>
-							<p style="line-height: 1.6em">
-								(You can also use <span class="font-big-aligned">+</span> or <span class="font-big">-</span> instead of <span class="font-big-aligned">*</span>)
-							</p>
-						  </td>
-						</tr>
-						<tr>
-						  <td>
-							<ol>
-								<li>One</li>
-								<li>Two</li>
-								<li>Three</li>
-							</ol>
-						  </td>
-						  <td>
-							<p style="line-height: 1.6em">
-								1. One<br/>2. Two<br/>3. Three
-							</p>
-						  </td>
-						  <td>
-							<p style="line-height: 1.6em">
-								1) One<br/>2) Two<br/>3) Three
-							</p>
-						  </td>
-						</tr>
-						<tr>
-						  <td>
-							<ul>
-								<li>
-									Item
-									<ol>
-										<li>This is indented four spaces</li>
-										<li>This is indented four spaces</li>
-									</ol>
-								</li>
-								<li>
-									Item
-									<ul>
-										<li>This is indented four spaces</li>
-										<li>This is indented four spaces</li>
-									</ul>
-								</li>
-								<li>Item</li>
-							</ul>
-						  </td>
-						  <td>
-							<p style="line-height: 1.6em">
-								<span class="font-big-aligned">*</span> Item<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;1. This is indented four spaces<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;2. This is indented four spaces<br/>
-								<span class="font-big-aligned">*</span> Item<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="font-big-aligned">*</span> This is indented four spaces<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<span class="font-big-aligned">*</span> This is indented four spaces<br/>
-								<span class="font-big-aligned">*</span> Item
-							</p>
-						  </td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td>
-							<hr class="custom-hr"/>
-							I'm between two rules!
-							<hr class="custom-hr"/>
-						  </td>
-						  <td>
-							---<br/>
-							I'm between two rules!<br/>
-							---
-						  </td>
-						  <td>
-							<span class="font-big-aligned">*</span><span class="font-big-aligned">*</span><span class="font-big-aligned">*</span><br/>
-							I'm between two rules!<br/>
-							<span class="font-big-aligned">*</span><span class="font-big-aligned">*</span><span class="font-big-aligned">*</span>
-						  </td>
-						</tr>
-					  </tbody>
-					</table>
-		
-				</li>
-				
-				<!-- Github Markdown Reference
-				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-				<li id="githubTab">
-					<table class="u-full-width">
-					  <thead>
-						<tr>
-						  <th>Result</th>
-						  <th>Markdown</th>
-						  <th>&nbsp;</th>
-						</tr>
-					  </thead>
-					  <tbody>
-						<tr>
-						  <td><a href="http://github.com">http://github.com</a></td>
-						  <td>http://github.com</td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td><del>Strikethrough</del></td>
-						  <td><span class="font-big">~~</span>Strikethrough<span class="font-big">~~</span></td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td>
-							<div class="code-block">
-								<strong>String</strong> s1 = <span style="color:#800">"Syntax highlighting"</span>;<br/>
-								System.out.println(s1);
-							</div>
-						  </td>
-						  <td>
-						  
-							<span class="font-big-aligned" style="vertical-align:bottom;line-height:0.1em">```</span>java<br/>
-							String s1 = "Syntax highlighting";<br/>
-							System.out.println(s1);<br/>
-							<span class="font-big-aligned">```</span>
-							
-						  </td>
-						  <td>(See all languages supported <a href="https://github.com/github/linguist/blob/master/lib/linguist/languages.yml">here</a>)</td>
-						</tr>
-						<tr>
-						  <td>
-							<table>
-								<thead>
-									<tr>
-										<th style="text-align:left">Left-Aligned</th>
-										<th style="text-align:center">Center Aligned</th>
-										<th style="text-align:right">Right Aligned</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td style="text-align:left">hyphens first row</td>
-										<td style="text-align:center">pipes for</td>
-										<td style="text-align:right">columns</td>
-									</tr>
-									<tr style="background:#eee">
-										<td style="text-align:left">colons in</td>
-										<td style="text-align:center">the first row</td>
-										<td style="text-align:right">to align</td>
-									</tr>
-									<tr>
-										<td style="text-align:left">zebra stripes</td>
-										<td style="text-align:center">added</td>
-										<td style="text-align:right">automatically</td>
-									</tr>
-								</tbody>
-							</table>
-						  </td>
-						  <td colspan="2">
-							| Left-Aligned  | Center Aligned  | Right Aligned |<br/>
-							| :---------------- |:------------:| --------:|<br/>
-							| hyphens first row | pipes for | columns |<br/>
-							| colons in      | the first row        |   to align |<br/>
-							| zebra stripes | added        |    automatically |
-						  </td>
-						</tr>
-						<tr>
-							<td>
-								<input type="checkbox" disabled /> a task<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" disabled /> a subtask<br/>
-								<input type="checkbox" checked="checked" disabled />  a completed task
-							</td>
-							<td>- [ ] a task<br/>
-								&nbsp;&nbsp;- [ ] a subtask<br/>
-								- [x] a completed task
-							</td>
-							<td>&nbsp;</td>
-						</tr>
-					  </tbody>
-					</table>
-				</li>
-				
-				
-				<!-- Reddit Markdown Reference
-				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-				<li id="redditTab">
-					<table class="u-full-width">
-					  <thead>
-						<tr>
-						  <th>Result</th>
-						  <th>Markdown</th>
-						  <th>&nbsp;</th>
-						</tr>
-					  </thead>
-					  <tbody>
-						<tr>
-						  <td>Superscript<sup>text</sup></td>
-						  <td>super^script</td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td>Superscript<sup>text with spaces</sup></td>
-						  <td>super^(script with spaces)</td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td><a href="http://reddit.com">http://reddit.com</a></td>
-						  <td>http://reddit.com</td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td><del>Strikethrough</del></td>
-						  <td><span class="font-big">~~</span>Strikethrough<span class="font-big">~~</span></td>
-						  <td>&nbsp;</td>
-						</tr>
-						<tr>
-						  <td>
-							<table>
-								<thead>
-									<tr>
-										<th style="text-align:left">Left-Aligned</th>
-										<th style="text-align:center">Center Aligned</th>
-										<th style="text-align:right">Right Aligned</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td style="text-align:left">hyphens first row</td>
-										<td style="text-align:center">pipes for</td>
-										<td style="text-align:right">columns</td>
-									</tr>
-									<tr>
-										<td style="text-align:left">colons in</td>
-										<td style="text-align:center">the first row</td>
-										<td style="text-align:right">to align</td>
-									</tr>
-									<tr>
-										<td style="text-align:left">another</td>
-										<td style="text-align:center">table</td>
-										<td style="text-align:right">row</td>
-									</tr>
-								</tbody>
-							</table>
-						  </td>
-						  <td colspan="2">
-							| Left-Aligned  | Center Aligned  | Right Aligned |<br/>
-							| :---------------- |:------------:| --------:|<br/>
-							| hyphens first row | pipes for | columns |<br/>
-							| colons in      | the first row        |   to align |<br/>
-							| another | table        |    row |
-						  </td>
-						</tr>
-					  </tbody>
-					</table>
-				</li>
-			</ul>
-		</div>
-    </div>
-	
-	<div class="row">
-		<div class="twelve columns">
-			<p><small>Created by <a href="https://twitter.com/eh3rrera" target="_blank">Esteban Herrera</a>. The <a href="https://github.com/eh3rrera/markdowntutorial" target="_blank">code</a> of this page is MIT licensed.<br />
-			I want to thank (in no special order) <a href="https://twitter.com/gjtorikian" target="_blank">Garen Torikian</a> for his <a href="http://markdowntutorial.com/" target="_blank">Markdown Tutorial</a>, which helped me as an inspiration to create this reference and tutorial. <a href="https://twitter.com/dhg" target="_blank">Dave Gamache</a> for his simple and elegant framework <a href="http://getskeleton.com/" target="_blank">Skeleton</a>, <a href="https://github.com/olado" target="_blank">Laura Doktorova</a> for her great javascript template engine <a href="http://olado.github.io/doT/index.html" target="_blank">doT.js</a>, <a href="http://jacoborus.codes/" target="_blank">Jacobo Tabernero</a> for his useful plugin <a href="http://nanobar.micronube.com/" target="_blank">nanobar</a>. <a href="https://github.com/rlidwka" target="_blank">Alex Kocharin</a> and <a href="https://github.com/puzrin" target="_blank">Vitaly Puzrin</a> for the awesome JS library <a href="https://github.com/markdown-it/markdown-it" target="_blank">markdown-it</a>. Scott McClaugherty for <a href="https://github.com/gamefreak/snuownd" target="_blank">SnuDown</a> a great javascript port of Reddit's markdown parser. <a href="http://tristanedwards.me" target="_blank">Tristan Edwards</a> for his great plug-in <a href="https://github.com/t4t5/sweetalert" target="_blank">Sweet-Alert</a>. All the great <a href="https://github.com/isagalaev/highlight.js/blob/master/AUTHORS.en.txt" target="_blank">people</a> behind <a href="https://github.com/isagalaev/highlight.js" target="_blank">highlight.js</a>. And last but not least, the awesome guys behind <a href="http://codyhouse.co" target="_blank">Codyhouse</a> for their articles.</small></p> 
-		</div>
-	</div>
-	
-  </div>
+    <div class="container">
+        
+        <div class="twelve columns">
+            <p><b>Markdown</b> is a simple way to format text that looks great on any device. It doesn’t do anything fancy like change the font size, color, or type &mdash; just the essentials, using keyboard symbols you already know.</p>
+        </div>
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  
-  
-  
-  <!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script src="js/tabs.js"></script>
-  <script src="js/nanobar.min.js"></script>
-  
-	<script type="text/javascript">
-		var nanobar = new Nanobar( {id:'bar', bg:'#000'} );
-		nanobar.go( 99.99999 );
-	</script>
+        <div class="twelve columns center">
+            <a class="button button-primary" href="tutorial/" style="padding: 0 15px">Try Our 10 Minute Markdown Tutorial</a>
+        </div>
+
+        <div class="twelve columns center">
+
+            <table class="markdown-reference">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th class="second-example">Or</th>
+                        <th>&hellip; to Get</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>                        
+                        <td class="preformatted">*Italic*</td>
+                        <td class="preformatted second-example">_Italic_</td>
+                        <td><em>Italic</em></td>
+                    </tr>
+                    <tr>                        
+                        <td class="preformatted">**Bold**</td>
+                        <td class="preformatted second-example">__Bold__</td>
+                        <td><strong>Bold</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="preformatted">
+                            # Heading 1
+                        </td>
+                        <td class="preformatted second-example">
+                            Heading 1<br/>
+                            =========
+                        </td>
+                        <td>
+                            <h1 class="smaller-h1">Heading 1</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="preformatted">
+                            ## Heading 2
+                        </td>
+                        <td class="preformatted second-example">
+                            Heading 2<br/>
+                            ---------
+                        </td>
+                        <td>
+                            <h2 class="smaller-h2">Heading 2</h2>
+                        </td>
+                    </tr>
+                    <tr>                        
+                        <td class="preformatted">
+                            [Link](http://a.com)
+                        </td>
+                        <td class="preformatted second-example">
+                            [Link][1]<br/>
+                            &#8942;<br/>
+                            [1]: http://b.org
+                        </td>
+                        <td><a href="http://commonmark.org/">Link</a></td>
+                    </tr>
+                    <tr>
+                        <td class="preformatted">
+                            ![Image](http://url/a.png)
+                        </td>
+                        <td class="preformatted second-example">
+                            ![Image][1]<br/>
+                            &#8942;<br/>
+                            [1]: http://url/b.jpg
+                        </td>
+                        <td>
+                            <img src="images/favicon.png" width="36" height="36" alt="Markdown"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="preformatted">
+                            &gt; Blockquote
+                        </td>
+                        <td class="preformatted second-example">
+                            &nbsp;
+                        </td>
+                        <td>
+                            <blockquote>Blockquote</blockquote>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="preformatted">
+                            A paragraph.<br/>
+                            <br/>
+                            A paragraph after 1 blank line.</td>
+                        <td class="preformatted second-example">
+                            &nbsp;                       
+                        </td>
+                        <td>
+                            <p>A paragraph.</p>
+                            <p>A paragraph after 1 blank line.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="preformatted">
+                            <p>
+                                * List<br/>
+                                * List<br/>
+                                * List
+                            </p>
+                        </td>
+                        <td class="preformatted second-example">
+                            <p>
+                                - List<br/>
+                                - List<br/>
+                                - List<br/>
+                            </p>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>List</li>
+                                <li>List</li>
+                                <li>List</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="preformatted">
+                            <p>
+                                1. One<br/>
+                                2. Two<br/>
+                                3. Three
+                            </p>
+                        </td>
+                        <td class="preformatted second-example">
+                            <p>
+                                1) One<br/>
+                                2) Two<br/>
+                                3) Three
+                            </p>
+                        </td>
+                        <td>
+                            <ol>
+                                <li>One</li>
+                                <li>Two</li>
+                                <li>Three</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="preformatted">
+                            Horizontal Rule<br/>
+                            <br/>
+                            ---
+                        </td>
+                        <td class="preformatted second-example">
+                            Horizontal Rule<br/>
+                            <br/>
+                            ***
+                        </td>
+                        <td>
+                            Horizontal Rule
+                            <hr class="custom-hr" />
+                        </td>
+                    </tr>
+                    <tr>                        
+                        <td class="preformatted">
+                            `Inline code` with backticks
+                            </td>
+                        <td class="preformatted second-example">
+                            &nbsp;
+                        </td>
+                        <td>
+                            <code class="preformatted">Inline code</code> with backticks
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="preformatted">
+                            ```<br/>
+                            # code block<br/>
+                            print '3 backticks or'<br/> 
+                            print 'indent 4 spaces'<br/>                            
+                            ```
+                        </td>
+                        <td class="preformatted second-example">
+                            <span class="spaces">····</span># code block<br/> 
+                            <span class="spaces">····</span>print '3 backticks or'<br/>
+                            <span class="spaces">····</span>print 'indent 4 spaces'
+                        </td>
+                        <td>
+                            <div class="code-block">
+                                # code block
+                                <br/> print '3 backticks or'
+                                <br/> print 'indent 4 spaces'
+                            </div>
+                        </td>
+                    </tr>                    
+                </tbody>
+            </table>
+        </div>
+                
+        <div class="twelve columns" style="margin-top: 2%">
+            <p><b>Want to experiment with Markdown?</b></p>
+            <p>Try our <b><a href="tutorial/">10 minute interactive tutorial</a></b>, or <a href="http://try.commonmark.org/">play with the reference CommonMark implementation</a>.</p>
+        </div>
+
+        <div class="twelve columns">
+            <p><b>Need more detail?</b></p>
+            <p>Refer to <a href="http://spec.commonmark.org">the official CommonMark spec</a>, or <a href="http://talk.commonmark.org">discuss CommonMark with us</a>.</p>
+        </div>
+
+    </div>
+
 </body>
+
 </html>

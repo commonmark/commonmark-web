@@ -5,7 +5,7 @@
 */
 	
 // Set up progress bar
-var nanobar = new Nanobar( {id:'bar', bg:'#000'} );
+var nanobar = new Nanobar( {id:'bar', bg:'#33C3F0'} );
 var numberSlides = $(".slide").length;
 advanceBar(0);
 
@@ -21,28 +21,29 @@ function advanceBar(currentSlide) {
 	var advancedPercentage = ((currentSlide + 1) / numberSlides) * 100;
 	if (advancedPercentage == 0) advancedPercentage = 0.01;
 	else if (advancedPercentage == 100) advancedPercentage = 99.99999;
-	nanobar.go( advancedPercentage );
+	nanobar.go(advancedPercentage);
 }
 
 function updateSlideNavigation(index) {
 	$('.current').removeClass('current');
 	$(".dotstyle li:eq(" + index + ")").addClass('current');
+    $(".cd-label").addClass("make-it-opaque");
 }
 
+
+//
+// stuff we do when the page is finished loading
+//
 $(document).ready(function() {
 	// Constants
-	var NUMBER_OF_SECTIONS = 15;
-	var COMMON_MD = 0;
-	var GITHUB_MD = 1;
-	var REDDIT_MD = 2;
 	var EDITOR_ID_PREFIX = "editor_";
 	var CK_SHOW_HTML_ID_PREFIX = "ck_show_html_";
-	var BTN_SHOW_ANSWER_ID_PREFIX = "btn_answer_";
 	var RENDER_PAD_ID_PREFIX = "render_pad_";
 	var HTML_PAD_ID_PREFIX = "html_pad_";
-	
+    var RESET_ID_PREFIX = "btn_reset_";
+    	
 	// swipe for mobile devices
-	$( ".touch .slide" ).on( "swipeleft", function() {
+	$(".touch .slide").on("swipeleft", function() {
 		var slide = $(this);
 		var nextSlide = slide.next(".slide");
 		if(nextSlide.length != 0) {
@@ -51,7 +52,7 @@ $(document).ready(function() {
 			advanceBar(nextSlide.index());
 		}
 	} );
-	$( ".touch .slide" ).on( "swiperight", function() {
+	$(".touch .slide").on("swiperight", function() {
 		var slide = $(this);
 		var prevSlide = slide.prev(".slide");
 		if(prevSlide.length != 0) {
@@ -74,7 +75,7 @@ $(document).ready(function() {
 	});
 	
 	// Open interest point descriptions
-	$('.cd-single-point').children('a').on('click', function(event){
+	$('.cd-single-point').children('a').on('click', function(event) {
 		event.preventDefault();
 		var selectedPoint = $(this).parent('li');
 		if( selectedPoint.hasClass('is-open') ) {
@@ -83,37 +84,54 @@ $(document).ready(function() {
 			selectedPoint.addClass('is-open').siblings('.cd-single-point.is-open').removeClass('is-open').addClass('visited');
 		}
 	});
+    
 	// Close interest point descriptions
-	$('.cd-close-info').on('click', function(event){
+	$('.cd-close-info').on('click', function(event) {
 		event.preventDefault();
 		$(this).parents('.cd-single-point').eq(0).removeClass('is-open').addClass('visited');
+        completeInterestPoints();
 	});
+    
 	var interestPointsSlide = $(".slide:eq(0)");
-	interestPointsSlide.css("-webkit-tap-highlight-color", "transparent"); //To eliminate the flicker on iOS when tapping
-	interestPointsSlide.on('click', function(event){
+    //To eliminate the flicker on iOS when tapping
+	interestPointsSlide.css("-webkit-tap-highlight-color", "transparent"); 
+	interestPointsSlide.on('click', function(event) {
 		closeInterestPoint(event);
 	});
+    
 	function closeInterestPoint(event) {
 		if( !$(event.target).is('.cd-single-point a') && !$(event.target).is('.cd-close-info')){
 			$('.cd-single-point.is-open').removeClass('is-open').addClass('visited');
 		}
+        completeInterestPoints();
 	}
+    
+    function completeInterestPoints() {
+        if ($('li.cd-single-point').length == $('li.cd-single-point.visited').length) {
+            $('.try-it button').addClass("button-urgent");
+        }
+    }
 	
 	// Set up markdown editors
 	$('.editor').each(function() {
+        
 		var elementId = $(this)[0].id;
 		var exerciseId = getExerciseId(elementId);
 		
 		// Set up event to update markdown/html when the user writes something
-		$(this).on('keyup', function(event){
-			var md = generateMd(exerciseId);
-			
-			if(exercises[exerciseId] != undefined && md.trim() == exercises[exerciseId]["answer"]) {
-				if(exerciseId == "15-1") {
-					swal({title:"Excellent job!", text: "You are now a Markdown Master", type: "success"});
-				} else {
-					swal({title:"Good job!", text: "That's correct. Now you can go to the next exercise.", type: "success"});
-				}
+		$(this).on('keyup', function(event) {        
+                        			
+            var md = generateMd(exerciseId);
+            
+			if(exercises[exerciseId] != undefined && $(this).data('win') == undefined) {
+                                               
+                if (md.trim().toLowerCase() == exercises[exerciseId]["answer"].toLowerCase()) {
+                    $(this).data('win', 1);
+                    $('').addClass('button-urgent');
+                    swal({title: randomSuccessTitle(), type: "success", allowOutsideClick: "true", timer: "2000" });
+                    markComplete(exerciseId);                    
+                }
+                
 			}
 		});
 		
@@ -133,6 +151,23 @@ $(document).ready(function() {
 			generateMd(exerciseId);
 		});
 	});
+    
+  	// Set up reset buttons
+	$('.button-reset').each(function() {
+		var elementId = $(this)[0].id;
+		var exerciseId = getExerciseId(elementId);
+        var editor = $("#" + EDITOR_ID_PREFIX + exerciseId); 
+        $(this).toggle();
+        
+		// Set up click event for the button
+		$(this).on('click', function(event){
+			editor.val(editor.data("original"));
+			generateMd(exerciseId);
+            $(this).hide();
+		});
+        
+    });
+
 	
 	// Set up show html checkboxes
 	$('.show-html').each(function() {
@@ -141,44 +176,68 @@ $(document).ready(function() {
 		
 		// Set up click event for the checkbox
 		$(this).on('click', function(event){
-			var toggle = 'hidden';
+            var htmlPadElement = $("#" + RENDER_PAD_ID_PREFIX + exerciseId)
 			var element = $("#" + HTML_PAD_ID_PREFIX + exerciseId);
 			element.toggle();
-			/*if( element.css('visibility') == 'hidden' ) {
-				toggle = 'visible';
-			}
-			element.css('visibility', toggle);*/
+            htmlPadElement.toggle();
 			generateMd(exerciseId);
 		});
 	});
-	
+    
+    // highlight the 'next' button if the exercise is complete
+    function markComplete(exerciseId) {
+        var x = exerciseId.substring(exerciseId.lastIndexOf("-") + 1);
+        $('.slide.' + x + ' .button-next').addClass('button-urgent');     
+        $('.slide.' + x + ' .button-next-lesson').addClass('button-urgent');
+        console.log('.slide.' + x + ' .button-next');   
+    }
+    
+    // vary the success alert text so it doesn't get boring
+    function randomSuccessTitle() {
+        var a = [
+            'Good Job!',
+            'Fantastic!',
+            'Well Done!',
+            'Excellent!',
+            'Perfect!',
+            'Super!', 
+            'Just Right!',
+            'You Did It!',
+            'Great Work!',
+            'Stellar!',
+            'Yes!',
+            'You Got It!',
+            'That’s Right!',
+            'That’s It!',
+            'Awesome!',
+            'Superb!',
+            'Outstanding!'
+        ]
+        return a[Math.floor(Math.random() * a.length)];
+    }	
 	
 	function generateMd(exerciseId) {
-		var text = $("#" + EDITOR_ID_PREFIX + exerciseId).val();
-		var mdFlavour = configureExtensions(exerciseId);
-		var md;
+        var editor = $("#" + EDITOR_ID_PREFIX + exerciseId); 
+		var editortext = editor.val();		        
+        var md = window.markdownit();	
+        
+        // store the original text the first time we call this
+        if (editor.data("original") == undefined) {
+            editor.data("original", editortext); 
+        } else {        
+            // if user changed text, allow reset button
+            if (editortext != editor.data("original")) {
+                $("#" + RESET_ID_PREFIX + exerciseId).show();
+            } else {
+                $("#" + RESET_ID_PREFIX + exerciseId).hide();
+            }
+        }
+        
+        // bake the raw editor Markdown into HTML
+		var html = md.render(editortext);
+		$("#" + RENDER_PAD_ID_PREFIX + exerciseId).html("").html(html);        
 		
-		// Set up marked options
-		if(mdFlavour == GITHUB_MD) {
-			md = window.markdownit({
-			  linkify: true,
-			  highlight: function(code, lang) {
-				var languageToDetect = typeof(lang) !== "undefined" ? lang.toLowerCase() : '';
-				return hljs.highlightAuto(code, [languageToDetect]).value;
-			  }
-			});
-		} else {
-			md = window.markdownit();
-		}
-		
-		var html = "";
-		if(mdFlavour == REDDIT_MD) {
-			html = SnuOwnd.getParser().render(text);
-		} else {
-			html = md.render(text);
-		}
-		$("#" + RENDER_PAD_ID_PREFIX + exerciseId).html("").html(html);
-		
+        // if 'Show Generated HTML' is checked, populate that
 		var chk = $("#" + CK_SHOW_HTML_ID_PREFIX + exerciseId)[0];
 		if(typeof(chk) !== 'undefined' && chk.checked) {
 			var htmlSH = hljs.highlightAuto(html, ["html"]).value.replace(/(?:\r\n|\r|\n)/g, '<br />');
@@ -189,24 +248,7 @@ $(document).ready(function() {
 	}
 	
 	function getExerciseId(elementId) {
-		var exerciseId = elementId.substring(elementId.lastIndexOf("_") + 1);
-		
-		return exerciseId;
+		return elementId.substring(elementId.lastIndexOf("_") + 1);
 	}
 	
-	function configureExtensions(exerciseId) {
-		// The format of exerciseId is lesson-exercise
-		var lesson = parseInt(exerciseId.split("-")[0], 10);
-		var mdFlavor = GITHUB_MD;
-		
-		// From lesson 10 onward, extensions have to be enable
-		if(lesson == 13) {
-			mdFlavor = REDDIT_MD;
-		}
-		else if (lesson < 10 || lesson == 15) {
-			mdFlavor = COMMON_MD; 
-		}
-		
-		return mdFlavor;
-	}
 });

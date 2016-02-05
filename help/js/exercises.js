@@ -7,95 +7,99 @@
 // Exercise data
 var exercises = {
 	"1-1": {
-		answer: "<p>The music video for Rihanna's song <strong>American Oxygen</strong> depicts various moments from American history, including the inauguration of Barack Obama.</p>",
-		correctMd: "The music video for Rihanna's song **American Oxygen** depicts various moments from American history, including the inauguration of Barack Obama."
+		answer: "<p>The music video for Rihanna’s song <strong>American Oxygen</strong> depicts various moments from American history, including the inauguration of Barack Obama.</p>",
+		correctMd: "The music video for Rihanna’s song **American Oxygen** depicts various moments from American history, including the inauguration of Barack Obama."
 	}, 
 	"1-2": {
-		answer: "<p>Pearl Schiff couldn't find an American publisher for her second novel after her first made <strong><em>The New York Times</em> Best Seller</strong> list.</p>",
-		correctMd: "Pearl Schiff couldn't find an American publisher for her second novel after her first made **_The New York Times_ Best Seller** list."
-	}, 
-	"1-3": {
-		answer: "<p>TODAY ONLY! Pizzas *20% OFF*</p>",
-		correctMd: "TODAY ONLY! Pizzas \\*20% OFF*"
+		answer: "<p>Why, sometimes I’ve believed as many as <em>six</em> impossible things before breakfast.</p>",
+		correctMd: "Why, sometimes I’ve believed as many as _six_ impossible things before breakfast."
+	},
+    "1-3": {
+        answer: "<p><strong>Everyone <em>must</em> attend the meeting at 5 o’clock today.</strong></p>",
+        correctMd: "**Everyone _must_ attend the meeting at 5 o’clock today.**"
+    }, 
+	"1-4": {
+		answer: "<p>I am totally awesome.*</p>\n<p>* for certain very small values of awesome</p>",
+		correctMd: "I am totally awesome.*\n\n\\* for certain very small values of awesome"
 	}, 
 	"2-1": {
-		answer: "<h2>April 18, 1938</h2>\n<p>Superman made his debut in Action Comics #1.</p>",
-		correctMd: "## April 18, 1938\n\nSuperman made his debut in Action Comics #1."
+		answer: "<h2>Chapter 1</h2>\n<p>Something about the room made him uneasy.</p>\n<h2>Chapter 2</h2>\n<p>It's behind you! Hurry before it</p>",
+		correctMd: "## Chapter 1\nSomething about the room made him uneasy.\n## Chapter 2\nIt's behind you! Hurry before it"
 	}, 
+	"2-2": {
+		answer: "<h1>After the Big Bang</h1>\n<p>A brief summary of time</p>\n<h2>Life on earth</h2>\n<p>10 billion years</p>\n<h2>You reading this</h2>\n<p>13.7 billion years</p>",
+		correctMd: "# After the Big Bang\nA brief summary of time\n## Life on earth\n10 billion years\n## You reading this\n13.7 billion years"
+	},     
 	"3-1": {
-		answer: "<p>The <a href=\"http://www.ur.ac.rw\">University of Rwanda</a> was formed in 2013 through the merger of Rwanda's seven public institutions of higher education.</p>",
-		correctMd: "The [University of Rwanda](http://www.ur.ac.rw) was formed in 2013 through the merger of Rwanda's seven public institutions of higher education."
+		answer: "<p>You can do anything at <a href=\"http://html5zombo.com\">http://html5zombo.com</a></p>",
+		correctMd: "You can do anything at <http://html5zombo.com>"
 	}, 
 	"3-2": {
-		answer: "<p><a href=\"http://en.wikipedia.org/w/index.php?title=Hurricane\">Hurricane</a> Erika was the strongest and longest-lasting tropical cyclone in the 1997 Atlantic <a href=\"http://en.wikipedia.org/w/index.php?title=Hurricane\">hurricane</a> season.</p>",
-		correctMd: "[Hurricane][1] Erika was the strongest and longest-lasting tropical cyclone in the 1997 Atlantic [hurricane][1] season.\n\n[1]:http://en.wikipedia.org/w/index.php?title=Hurricane"
+		answer: "<p>The <a href=\"http://www.ur.ac.rw\">University of Rwanda</a> was formed in 2013 through the merger of Rwanda’s seven public institutions of higher education.</p>",
+		correctMd: "The [University of Rwanda](http://www.ur.ac.rw) was formed in 2013 through the merger of Rwanda’s seven public institutions of higher education."
+	}, 
+	"3-3": {
+		answer: "<p><a href=\"https://goo.gl/YEEHP0\">Hurricane</a> Erika was the strongest and longest-lasting tropical cyclone in the 1997 Atlantic <a href=\"https://goo.gl/YEEHP0\">hurricane</a> season.</p>",
+		correctMd: "[Hurricane][1] Erika was the strongest and longest-lasting tropical cyclone in the 1997 Atlantic [hurricane][1] season.\n\n[1]:https://goo.gl/YEEHP0"
 	}, 
 	"4-1": {
-		answer: "<p><img src=\"http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png\" alt=\"Wikipedia\" title=\"Wikipedia\"></p>",
-		correctMd: "![Wikipedia](http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png \"Wikipedia\")"
+		answer: "<p><img src=\"http://commonmark.org/help/images/favicon.png\" alt=\"\"></p>",
+		correctMd: "![](http://commonmark.org/help/images/favicon.png)"
+	}, 
+	"4-2": {
+		answer: "<p><img src=\"http://commonmark.org/help/images/favicon.png\" alt=\"Logo\" title=\"The Markdown logo is Creative Commons\"></p>",
+		correctMd: "![Logo][1]\n\n[1]: http://commonmark.org/help/images/favicon.png \"The Markdown logo is Creative Commons\""
 	}, 
 	"5-1": {
-		answer: "<p>What's the result of <code>c=a+++++b;</code>?</p>",
-		correctMd: "What's the result of `c=a+++++b;`?"
+		answer: "<p>When <code>x = 3</code>, that must mean <code>x + 2 = 5</code></p>",
+		correctMd: "When `x = 3`, that must mean `x + 2 = 5`"
 	}, 
 	"5-2": {
-		answer: "<p>Try this:</p>\n<pre><code>a^=b;\nb^=a;\na^=b;</code></pre>",
-		correctMd: "Try this:\n\n    a^=b;\n    b^=a;\n    a^=b;"
+		answer: "<p>Who ate the most donuts this week?</p>\n<pre><code>Jeff  15\nSam   11\nRobin  6</code></pre>",
+		correctMd: "Who ate the most donuts this week?\n\n    Jeff  15\n    Sam   11\n    Robin  6"
+	},  
+	"5-3": {
+		answer: "<p>A loop in JavaScript:</p>\n<pre><code>var i;\nfor (i=0; i&lt;5; i++) {\n  console.log(i);\n}\n</code></pre>\n<p>What numbers will this print?</p>",
+		correctMd: "A loop in JavaScript:\n```\nvar i;\nfor (i=0; i<5; i++) {\n  console.log(i);\n}\n```\nWhat numbers will this print?"
 	},  
 	"6-1": {
-		answer: "<blockquote>\n<p>The quote:</p>\n<blockquote>\n<p>&quot;Somewhere, something incredible is waiting to be known&quot;</p>\n</blockquote>\n<p>Has been ascribed to Carl Sagan.</p>\n</blockquote>",
-		correctMd: "> The quote:\n>\n>> \"Somewhere, something incredible is waiting to be known\"\n> \n>Has been ascribed to Carl Sagan."
+		answer: "<p>The quote</p>\n<blockquote>\n<p>Somewhere, something incredible is waiting to be known</p>\n</blockquote>\n<p>has been ascribed to Carl Sagan.</p>",
+		correctMd: "The quote\n\n> Somewhere, something incredible is waiting to be known\n\nhas been ascribed to Carl Sagan."
 	}, 
 	"6-2": {
-		answer: "<blockquote>\n<p>JavaScript has two sets of equality operators: === and !==, and their evil twins == and !=. The good ones work the way you would expect. If the two operands are of the same type and have the same value, then === produces true and !== produces false. The evil twins do the right thing when the operands are of the same type, but if they are of different types, they attempt to coerce the values. the rules by which they do that are complicated and unmemorable. These are some of the interesting cases:</p>\n<pre><code>'' == '0'           // false\n0 == ''             // true\n0 == '0'            // true\n\nfalse == 'false'    // false\nfalse == '0'        // true\n\nfalse == undefined  // false\nfalse == null       // false\nnull == undefined   // true</code></pre>\n</blockquote>",
-		correctMd: "> JavaScript has two sets of equality operators: === and !==, and their evil twins == and !=. The good ones work the way you would expect. If the two operands are of the same type and have the same value, then === produces true and !== produces false. The evil twins do the right thing when the operands are of the same type, but if they are of different types, they attempt to coerce the values. the rules by which they do that are complicated and unmemorable. These are some of the interesting cases:\n>\n>     '' == '0'           // false\n>     0 == ''             // true\n>     0 == '0'            // true\n>\n>     false == 'false'    // false\n>     false == '0'        // true\n>\n>     false == undefined  // false\n>     false == null       // false\n>     null == undefined   // true"
+		answer: "<p>My favorite Miss Manners quotes:</p>\n<blockquote>\n<p>Allowing an unimportant mistake to pass without comment is a wonderful social grace.</p>\n<p>Ideological differences are no excuse for rudeness.</p>\n</blockquote>",
+		correctMd: "My favorite Miss Manners quotes:\n\n> Allowing an unimportant mistake to pass without comment is a wonderful social grace.\n>\n> Ideological differences are no excuse for rudeness."
 	}, 
 	"7-1": {
-		answer: "<p>Actress Amy Adams has been nominated five times for an Academy Award.</p>\n<p>265 million people kick a football in association football matches every year.</p>",
-		correctMd: "Actress Amy Adams has been nominated five times for an Academy Award.\n\n265 million people kick a football in association football matches every year."
+		answer: "<p>The sky above the port was the color of television, tuned to a dead channel.</p>\n<p>It was a bright cold day in April, and the clocks were striking thirteen.</p>",
+		correctMd: "The sky above the port was the color of television, tuned to a dead channel.\n\nIt was a bright cold day in April, and the clocks were striking thirteen."
 	}, 
 	"7-2": {
-		answer: "<p>Two roads diverged in a yellow wood,<br>\nAnd sorry I could not travel both<br>\nAnd be one traveler, long I stood<br>\nAnd looked down one as far as I could<br>\nTo where it bent in the undergrowth</p>",
-		correctMd: "Two roads diverged in a yellow wood,  \nAnd sorry I could not travel both  \nAnd be one traveler, long I stood  \nAnd looked down one as far as I could  \nTo where it bent in the undergrowth"
+		answer: "<p>I have eaten<br>\nthe plums<br>\nthat were in<br>\nthe icebox</p>",
+		correctMd: "I have eaten\\\nthe plums\\\nthat were in\\\nthe icebox"
 	},
 	"8-1": {
-		answer: "<ul>\n<li>The Slovene botanist Fran Jesenko died while doing research for Triglav National Park, which he helped establish.</li>\n<li>The entrance porch of the Shankaragaurishvara Temple in Patan in Jammu and Kashmir, built in the late ninth century, has intricately sculpted carvings that appear freshly chiseled.</li>\n<li>The contralto Maria Radner, who died in the Germanwings plane crash, performed Wagner's Wesendonck Lieder at his villa, Wahnfried.</li>\n</ul>",
-		correctMd: "* The Slovene botanist Fran Jesenko died while doing research for Triglav National Park, which he helped establish.\n* The entrance porch of the Shankaragaurishvara Temple in Patan in Jammu and Kashmir, built in the late ninth century, has intricately sculpted carvings that appear freshly chiseled.\n* The contralto Maria Radner, who died in the Germanwings plane crash, performed Wagner's Wesendonck Lieder at his villa, Wahnfried."
+		answer: "<ul>\n<li>Flour</li>\n<li>Cheese</li>\n<li>Tomatoes</li>\n</ul>",
+		correctMd: "- Flour\n- Cheese\n- Tomatoes"
 	}, 
 	"8-2": {
-		answer: "<p>4 steps to better sleep:</p>\n<ol>\n<li>Stick to a sleep schedule</li>\n<li>Create a bedtime ritual</li>\n<li>Get comfortable</li>\n<li>Manage stress</li>\n</ol>",
-		correctMd: "4 steps to better sleep:\n\n1. Stick to a sleep schedule\n2. Create a bedtime ritual\n3. Get comfortable\n4. Manage stress"
+		answer: "<p>Four steps to better sleep:</p>\n<ol>\n<li>Stick to a sleep schedule</li>\n<li>Create a bedtime ritual</li>\n<li>Get comfortable</li>\n<li>Manage stress</li>\n</ol>",
+		correctMd: "Four steps to better sleep:\n1. Stick to a sleep schedule\n2. Create a bedtime ritual\n3. Get comfortable\n4. Manage stress"
 	},
+    "8-3": {
+		answer: "<p>1986. What a great season. Arguably the finest season in the history of the franchise.</p>",
+		correctMd: "1986\\. What a great season. Arguably the finest season in the history of the franchise."
+	},     
 	"9-1": {
-		answer: "<ol>\n<li>In a large skillet, brown onion and ground beef over medium heat. Add spaghetti sauce, and simmer 15 minutes.</li>\n<li>Preheat the oven to 350 degrees F (175 degrees C). Butter a 9x13 inch baking dish. Layer as follows:\n<ul>\n<li>1/2 of the ziti</li>\n<li>Provolone cheese</li>\n<li>Sour cream</li>\n<li>1/2 sauce mixture</li>\n<li>Remaining ziti</li>\n<li>Mozzarella cheese and</li>\n<li>Remaining sauce mixture.</li>\n</ul>\n</li>\n<li>Bake for 30 minutes in the preheated oven, or until cheeses are melted.</li>\n</ol>",
-		correctMd: "1. In a large skillet, brown onion and ground beef over medium heat. Add spaghetti sauce, and simmer 15 minutes.\n2. Preheat the oven to 350 degrees F (175 degrees C). Butter a 9x13 inch baking dish. Layer as follows:\n    * 1/2 of the ziti\n    * Provolone cheese\n    * Sour cream\n    * 1/2 sauce mixture\n    * Remaining ziti\n    * Mozzarella cheese and\n    * Remaining sauce mixture.\n3. Bake for 30 minutes in the preheated oven, or until cheeses are melted."
+		answer: "<ul>\n<li>Fruit\n<ul>\n<li>Apple</li>\n<li>Orange</li>\n<li>Banana</li>\n</ul>\n</li>\n<li>Dairy\n<ul>\n<li>Milk</li>\n<li>Cheese</li>\n</ul>\n</li>\n</ul>",
+		correctMd: "* Fruit\n  * Apple\n  * Orange\n  * Banana\n* Dairy\n  * Milk\n  * Cheese"
 	}, 
 	"9-2": {
-		answer: '<ol>\n<li>\n<p>CSS</p>\n<pre><code> .s1 {\n     font-size:80px;\n     color: blue;\n }\n</code></pre>\n</li>\n<li>\n<p>HTML</p>\n<pre><code>&lt;span class=&quot;s1&quot;&gt;A Paragraph&lt;/span&gt;\n</code></pre>\n</li>\n<li>\n<p>JS:</p>\n<pre><code>$(&quot;.s1&quot;).each(function(idx, el) {\n     text = $(el).text();\n     console.log(text);\n}</code></pre>\n</li>\n</ol>',
-		correctMd: "1. CSS\n\n        .s1 {\n            font-size:80px;\n            color: blue;\n        }\n2. HTML\n\n       <span class=\"s1\">A Paragraph</span>\n3. JS:\n\n       $(\".s1\").each(function(idx, el) {\n            text = $(el).text();\n            console.log(text);\n       }"
+		answer: "<ul>\n<li>World Cup 2014\n<ol>\n<li>Germany</li>\n<li>Argentina</li>\n<li>Netherlands</li>\n</ol>\n</li>\n<li>Rugby World Cup 2015\n<ol>\n<li>New Zealand</li>\n<li>Australia</li>\n<li>South Africa</li>\n</ol>\n</li>\n</ul>",
+		correctMd: "+ World Cup 2014\n  1. Germany\n  2. Argentina\n  3. Netherlands\n+ Rugby World Cup 2015\n  1. New Zealand\n  2. Australia\n  3. South Africa"
 	},
-	"11-1": {
-		answer: "<p>Esther Ballestrino, the former boss of <s>Jorge Mario Bergoglio</s> Pope Francis, was thrown from an aircraft by the Argentine security services in 1977.</p>",
-		correctMd: "Esther Ballestrino, the former boss of ~~Jorge Mario Bergoglio~~ Pope Francis, was thrown from an aircraft by the Argentine security services in 1977."
-	}, 
-	"12-1": {
-		answer: '<pre><code class="language-ruby"><span class="hljs-comment"># Generates array of primes up to the square root of N</span>\n \nprimes = [<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]\n \n(<span class="hljs-number">4</span>..<span class="hljs-constant">Math</span>.sqrt(<span class="hljs-constant">N</span>).floor).each <span class="hljs-keyword">do</span> |i|\n    (<span class="hljs-number">0</span>..primes.length-<span class="hljs-number">1</span>).each <span class="hljs-keyword">do</span> |j|\n        <span class="hljs-keyword">if</span> i % primes[j] == <span class="hljs-number">0</span>\n            isitprime = <span class="hljs-number">0</span>\n            <span class="hljs-keyword">break</span>\n        <span class="hljs-keyword">else</span> \n            isitprime = <span class="hljs-number">1</span>\n        <span class="hljs-keyword">end</span>     \n        <span class="hljs-keyword">end</span>\n    <span class="hljs-keyword">if</span> isitprime == <span class="hljs-number">1</span>\n        primes &lt;&lt; i\n    <span class="hljs-keyword">end</span>\n<span class="hljs-keyword">end</span>\n</code></pre>',
-		correctMd: "```ruby\n# Generates array of primes up to the square root of N\n \nprimes = [2,3]\n \n(4..Math.sqrt(N).floor).each do |i|\n	(0..primes.length-1).each do |j|\n		if i % primes[j] == 0\n			isitprime = 0\n			break\n		else \n			isitprime = 1\n		end		\n		end\n	if isitprime == 1\n		primes << i\n	end\nend\n```"
-	}, 
-	"13-1": {
-		answer: "<p>40<sup>x - 6x + 2</sup> + 7 = 100</p>",
-		correctMd: "40^(x - 6x + 2) + 7 = 100"
-	}, 
-	"14-1": {
-		answer: "<table>\n<thead>\n<tr>\n<th>2000</th>\n<th>2010</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>50</td>\n<td>30</td>\n</tr>\n</tbody>\n</table>",
-		correctMd: "|2000|2010|\n|----|----|\n|50|30|"
-	},
-	"14-2": {
-		answer: '<table>\n<thead>\n<tr>\n<th style="text-align:right">On the left</th>\n<th style="text-align:right">On the right</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style="text-align:right">88</td>\n<td style="text-align:right">99</td>\n</tr>\n</tbody>\n</table>',
-		correctMd: "|On the left|On the right|\n|----------:|-----------:|\n|88|99|"
-	},
-	"14-3": {
-		answer: '<table>\n<thead>\n<tr>\n<th style="text-align:left">Left Column</th>\n<th style="text-align:center">Center Column</th>\n<th style="text-align:right">Right Column</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style="text-align:left">one</td>\n<td style="text-align:center">two</td>\n<td style="text-align:right">three</td>\n</tr>\n<tr>\n<td style="text-align:left"><strong>four</strong></td>\n<td style="text-align:center"><strong>five</strong></td>\n<td style="text-align:right"><strong>six</strong></td>\n</tr>\n<tr>\n<td style="text-align:left">seven</td>\n<td style="text-align:center">eight</td>\n<td style="text-align:right">nine</td>\n</tr>\n</tbody>\n</table>',
-		correctMd: "|Left Column|Center Column|Right Column|\n|:----------|:-----------:|-----------:|\n|one|two|three|\n|**four**|**five**|**six**|\n|seven|eight|nine|"
+	"9-3": {
+		answer: "<ol>\n<li>\n<p>Ingredients</p>\n<ul>\n<li>spaghetti</li>\n<li>marinara sauce</li>\n<li>salt</li>\n</ul>\n</li>\n<li>\n<p>Cooking</p>\n<p>Bring water to boil, add a pinch of salt and spaghetti. Cook until pasta is <strong>tender</strong>.</p>\n</li>\n<li>\n<p>Serve</p>\n<p>Drain the pasta on a plate. Add heated sauce.</p>\n<blockquote>\n<p>No man is lonely eating spaghetti; it requires so much attention.</p>\n</blockquote>\n<p>Bon appetit!</p>\n</li>\n</ol>",
+		correctMd: "1. Ingredients\n\n    - spaghetti\n    - marinara sauce\n    - salt\n\n2. Cooking\n\n   Bring water to boil, add a pinch of salt and spaghetti. Cook until pasta is **tender**.\n\n3. Serve\n\n   Drain the pasta on a plate. Add heated sauce. \n\n   > No man is lonely eating spaghetti; it requires so much attention.\n\n   Bon appetit!"
 	}
 };
