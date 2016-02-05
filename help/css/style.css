@@ -172,6 +172,14 @@ code, kbd, pre, samp, .editor, .html-pad, .preformatted {
     font-weight: bold;
 }
 
+.muted {
+    color: #aaa;
+}
+
+.muted a {
+    color: #aaa;
+}
+
 /* mobile modifications */
 @media (max-width: 737px) {
 	.editor {
