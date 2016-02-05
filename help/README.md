@@ -1,11 +1,11 @@
-# markdowntutorial
+# markdownhelp
 Markdown Tutorial and Reference
 
-See it [here](http://eh3rrera.github.io/markdowntutorial/)
+As seen at **[http://commonmark.org/help/](http://commonmark.org/help/)**
 
-Everything is plain old HTML/CSS/Javascript with jQuery. Just download and open in a browser.
+Everything is plain old HTML/CSS/Javascript with jQuery, no server rendering, all local browser content. Just download and open in any (modern) browser.
 
-Main configuration files are js/setup.js and js/exercises.js
+Designed to work on all smartphone, tablets, desktop, and laptop screen sizes.
 
 ##Projects used
 Big thanks to:
