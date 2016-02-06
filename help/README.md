@@ -1,11 +1,8 @@
-# markdowntutorial
-Markdown Tutorial and Reference
+# **[commonmark.org/help](http://commonmark.org/help/)**
 
-See it [here](http://eh3rrera.github.io/markdowntutorial/)
+10 minute [interactive tutorial](http://commonmark.org/help/tutorial/) and 60 second [quick reference guide](http://commonmark.org/help/) for Markdown.
 
-Everything is plain old HTML/CSS/Javascript with jQuery. Just download and open in a browser.
-
-Main configuration files are js/setup.js and js/exercises.js
+Everything is plain old HTML/CSS/Javascript with jQuery. Just download and open in a browser. Works on all screen sizes, from 30" to teeny-tiny iPhone 4 size.
 
 ##Projects used
 Big thanks to:
@@ -14,7 +11,6 @@ Big thanks to:
 - [doT.js](http://olado.github.io/doT/index.html)
 - [Nanobar](http://nanobar.micronube.com/)
 - [Markdown-it](https://github.com/markdown-it/markdown-it)
-- [SnuDown](https://github.com/gamefreak/snuownd)
 - [Sweet-Alert](https://github.com/t4t5/sweetalert)
 - [highlight.js](https://github.com/isagalaev/highlight.js)
 - [CodyHouse](http://codyhouse.co)
@@ -25,4 +21,3 @@ All modern browsers, IE10+
 ##License:
 Open Source MIT.
 http://opensource.org/licenses/MIT
-
