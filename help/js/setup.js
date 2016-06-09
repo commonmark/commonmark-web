@@ -35,6 +35,7 @@ function updateSlideNavigation(index) {
 // stuff we do when the page is finished loading
 //
 $(document).ready(function() {
+
 	// Constants
 	var EDITOR_ID_PREFIX = "editor_";
 	var CK_SHOW_HTML_ID_PREFIX = "ck_show_html_";
@@ -126,10 +127,14 @@ $(document).ready(function() {
 			if(exercises[exerciseId] != undefined && $(this).data('win') == undefined) {
                                                
                 if (md.trim().toLowerCase() == exercises[exerciseId]["answer"].toLowerCase()) {
-                    $(this).data('win', 1);
-                    $('').addClass('button-urgent');
-                    swal({title: randomSuccessTitle(), type: "success", allowOutsideClick: "true", timer: "2000" });
-                    markComplete(exerciseId);                    
+					setTimeout(
+            			function () {
+							$(this).data('win', 1);
+							$('').addClass('button-urgent');
+							swal({title: randomSuccessTitle(), type: "success", allowOutsideClick: "true", timer: "2000" });
+							markComplete(exerciseId);                    
+						}, 1000            
+        			);
                 }
                 
 			}
