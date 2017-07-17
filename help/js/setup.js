@@ -124,12 +124,12 @@ $(document).ready(function() {
                         			
             var md = generateMd(exerciseId);
             
-			if(exercises[exerciseId] != undefined && $(this).data('win') == undefined) {
+			if(exercises[exerciseId] != undefined && $(this).data('win') != 1) {
                                                
                 if (md.trim().toLowerCase() == exercises[exerciseId]["answer"].toLowerCase()) {
+					$(this).data('win', 1);
 					setTimeout(
-            			function () {
-							$(this).data('win', 1);
+            			function () {							
 							$('').addClass('button-urgent');
 							swal({title: randomSuccessTitle(), type: "success", allowOutsideClick: "true", timer: "2000" });
 							markComplete(exerciseId);                    
