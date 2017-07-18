@@ -47,8 +47,8 @@ var exercises = {
 		correctMd: "![](http://commonmark.org/help/images/favicon.png)"
 	}, 
 	"4-2": {
-		answer: "<p><img src=\"http://commonmark.org/help/images/favicon.png\" alt=\"Logo\" title=\"The Markdown logo is Creative Commons\"></p>",
-		correctMd: "![Logo][1]\n\n[1]: http://commonmark.org/help/images/favicon.png \"The Markdown logo is Creative Commons\""
+		answer: "<p><img src=\"http://commonmark.org/help/images/favicon.png\" alt=\"Logo\" title=\"Creative Commons licensed\"></p>",
+		correctMd: "![Logo][1]\n\n[1]: http://commonmark.org/help/images/favicon.png \"Creative Commons licensed\""
 	}, 
 	"5-1": {
 		answer: "<p>When <code>x = 3</code>, that must mean <code>x + 2 = 5</code></p>",
