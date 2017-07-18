@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="utf-8">
-    <title>Markdown Tutorial - Blockquotes</title>
+    <title>Markdown Tutorial - Links</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -32,17 +32,18 @@
                     <li class="current"><a href="javascript:goToSlide(0);">1</a></li>
                     <li><a href="javascript:goToSlide(1);">2</a></li>
                     <li><a href="javascript:goToSlide(2);">3</a></li>
+                    <li><a href="javascript:goToSlide(3);">4</a></li>
                 </ul>
             </div>
         </div>
 
-        <div class="section blockquotes">
+        <div class="section 0 links">
 
-            <div class="slide 0 active">
+            <div class="slide active">
                 <div class="container">
                     <div class="row noselect">
                         <div class="twelve columns">
-                            <div class="lesson-number">08</div>
+                            <div class="lesson-number">05</div>
                         </div>
                     </div>
                     <div class="row rowspacer">
@@ -50,11 +51,13 @@
                     </div>
                     <div class="row">
                         <div class="four columns">
-                            <h2>Blockquotes</h2>
-                            <p>To create a blockquote, start a line with greater than <code>&gt;</code> followed by an optional space.
-                             </p>
-                             <p>
-                                Blockquotes can be nested, and can also contain other formatting.
+                            <h2>Links</h2>
+                            <p>
+                                Links can be either inline with the text, or placed at the bottom of the text as references.
+                            </p>
+                            <p>
+                                Link text is enclosed by square brackets <code>[]</code>, and for inline links, the link URL is enclosed by parens <code>()</code>.
+                            </p>
                             <p class="try-it">
                                 <button class="noselect button-primary button-next">Try It</button>
                             </p>
@@ -62,65 +65,81 @@
                         <div class="eight columns">
                             <div class="cd-product cd-container">
                                 <div class="cd-product-wrapper">
-                                    <div class="cd-product-description" style="font-size:22px">
-                                        &gt; First line<br/>
-                                        &gt; Another line<br/>
-                                        &gt;<br/>
-                                        &gt; &gt; Nested line<br/>
-                                        &gt; <br/>
-                                        &gt; Last line<br/>
+                                    <div class="cd-product-description" style="font-size:18px">
+                                        [text](http://a.com)<br/>
+                                        <br/>
+                                        [text][id]<br/>
+                                        &#8942;<br/>
+                                        [id]: http://b.org/ "title"<br/>
                                     </div>
                                     <ul>
-                                        <li class="cd-single-point" style="top:56px;left:22px;">
+                                        
+                                        <li class="cd-single-point" style="top: -24px;left: 150px;">
                                             <a class="cd-img-replace" href="#">More</a>
-                                            <div class="cd-more-info cd-right">
+                                            <div class="cd-more-info cd-left">
                                                 <p>
-                                                    To keep the quote together, blank lines inside the quote must contain the <code>&gt;</code> character.
+                                                    You can also use relative URLs such as<br/><br/><code>/example.html</code>
                                                 </p>
                                                 <a href="#" class="cd-close-info cd-img-replace">Close</a>
                                             </div>
                                         </li>
-                                        <li class="cd-single-point" style="top:160px;left:5px;">
+
+                                        <li class="cd-single-point" style="top: 20px;left:50px;">
+                                            <a class="cd-img-replace" href="#">More</a>
+                                            <div class="cd-more-info cd-left">
+                                                <p>Don’t put a space between any of the brackets.</p>
+                                                <a href="#" class="cd-close-info cd-img-replace">Close</a>
+                                            </div>
+                                        </li>
+
+                                        <li class="cd-single-point" style="top: 112px;left:8px;">
                                             <a class="cd-img-replace" href="#">More</a>
                                             <div class="cd-more-info cd-top">
-                                                <p>
-                                                    The space between the <code>&gt;</code> and the quoted text is optional.
-                                                </p>
+                                                <p>The link definition can be placed anywhere after a blank line, but is generally near the bottom.</p>
+                                                <p>Definition identifiers may consist of letters, numbers, spaces, and punctuation. They are not case sensitive.</p>
                                                 <a href="#" class="cd-close-info cd-img-replace">Close</a>
                                             </div>
                                         </li>
+
+                                        <li class="cd-single-point" style="top: 65px;left: 238px;">
+                                            <a class="cd-img-replace" href="#">More</a>
+                                            <div class="cd-more-info cd-top">
+                                                <p>The title of the link is optional.</p>
+                                                <a href="#" class="cd-close-info cd-img-replace">Close</a>
+                                            </div>
+                                        </li>
+
                                     </ul>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-
+            
+            
             <div class="slide 1">
                 <div class="container">
                     <div class="row exercise-instructions">
                         <div class="twelve columns">
-                            <p>Make this quote a proper blockquote – be sure to remove the <code>“”</code> characters, too:</p>
+                            <p>URLs may not become links in Markdown until enclosed in <code>&lt;</code> and <code>&gt;</code>. Turn this URL into a link:</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="six columns">
-                            <textarea id="editor_6-1" class="editor">The quote “Somewhere, something incredible is waiting to be known” has been ascribed to Carl Sagan.
-                            </textarea>
+                            <textarea id="editor_6-1" class="editor">You can do anything at http://html5zombo.com</textarea>
                         </div>
                         <div class="six columns">
                             <div id="render_pad_6-1" class="render-pad"></div>
                             <div id="html_pad_6-1" class="html-pad"></div>
-                        </div>                        
+                        </div>
                     </div>
                     <div class="row rowspacer">
                         <div class="six columns">
                             &nbsp;
                         </div>
-<div class="six columns generated-check">
-                           <label class="noselect"><input id="ck_show_html_6-1" type="checkbox" class="show-html" /> Show generated HTML</label>
+                        <div class="six columns generated-check">
+                            <label class="noselect"><input id="ck_show_html_6-1" type="checkbox" class="show-html" /> Show generated HTML</label>
                         </div>
                     </div>
                     <div class="row">
@@ -130,8 +149,8 @@
                                 <button id="btn_reset_6-1" class="noselect button button-reset">Reset</button>
                             </p>
                             <p>
-                                <button class="noselect button-primary button-next u-full-width">Next Exercise</button>
-                                <button class="noselect button-primary button-previous u-full-width">Blockquotes</button>
+                                <button class="noselect button-primary button-next u-full-width">Next Exercise</button>                                
+                                <button class="noselect button-primary button-previous u-full-width">Links</button>
                             </p>
                         </div>
                         <div class="six columns">
@@ -145,16 +164,12 @@
                 <div class="container">
                     <div class="row exercise-instructions">
                         <div class="twelve columns">
-                            <p>Format these quotes as one large blockquote:</p>
+                            <p>Link “University of Rwanda” to http://www.ur.ac.rw with an inline link:</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="six columns">
-                            <textarea id="editor_6-2" class="editor">My favorite Miss Manners quotes:
-
-Allowing an unimportant mistake to pass without comment is a wonderful social grace.
-
-Ideological differences are no excuse for rudeness.</textarea>
+                            <textarea id="editor_6-2" class="editor">The University of Rwanda was formed in 2013 through the merger of Rwanda’s seven public institutions of higher education.</textarea>
                         </div>
                         <div class="six columns">
                             <div id="render_pad_6-2" class="render-pad"></div>
@@ -165,7 +180,7 @@ Ideological differences are no excuse for rudeness.</textarea>
                         <div class="six columns">
                             &nbsp;
                         </div>
-                         <div class="six columns generated-check">
+                        <div class="six columns generated-check">
                             <label class="noselect"><input id="ck_show_html_6-2" type="checkbox" class="show-html" /> Show generated HTML</label>
                         </div>
                     </div>
@@ -176,7 +191,7 @@ Ideological differences are no excuse for rudeness.</textarea>
                                 <button id="btn_reset_6-2" class="noselect button button-reset">Reset</button>
                             </p>
                             <p>
-                                <a href="09-lists.html" id="btn_answer_6-3" class="noselect button button-primary button-next-lesson u-full-width">Lists</a>
+                                <button class="noselect button-primary button-next u-full-width">Next Exercise</button>
                                 <button class="noselect button-primary button-previous u-full-width">Previous Exercise</button>
                             </p>
                         </div>
@@ -185,8 +200,51 @@ Ideological differences are no excuse for rudeness.</textarea>
                         </div>
                     </div>
                 </div>
-            </div>                                
+            </div>
 
+            <div class="slide 3">
+                <div class="container">
+                    <div class="row exercise-instructions">
+                        <div class="twelve columns">
+                            <p>Link both of the words “hurricane” to the Wikipedia entry at https://goo.gl/YEEHP0 with a reference style link:
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="six columns">
+                            <textarea id="editor_6-3" class="editor">Hurricane Erika was the strongest and longest-lasting tropical cyclone in the 1997 Atlantic hurricane season.
+                            </textarea>
+                        </div>
+                        <div class="six columns">
+                            <div id="render_pad_6-3" class="render-pad"></div>
+                            <div id="html_pad_6-3" class="html-pad"></div>
+                        </div>
+                    </div>
+                    <div class="row rowspacer rowspacer">
+                        <div class="six columns">
+                            &nbsp;
+                        </div>
+                        <div class="six columns generated-check">
+                           <label class="noselect"><input id="ck_show_html_6-3" type="checkbox" class="show-html" /> Show generated HTML</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="six columns">
+                            <p>
+                                <button id="btn_answer_6-3" class="noselect button button-answer">Show Hint</button>
+                                <button id="btn_reset_6-3" class="noselect button button-reset">Reset</button>
+                            </p>
+                            <p>
+                                <a href="08-images.html" id="btn_answer_6-3" class="noselect button button-primary button-next-lesson u-full-width">Images</a>
+                                <button class="noselect button-primary button-previous u-full-width">Previous Exercise</button>
+                            </p>
+                        </div>
+                        <div class="six columns">
+                            <!-- empty -->
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
@@ -199,13 +257,13 @@ Ideological differences are no excuse for rudeness.</textarea>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/nanobar/0.4.2/nanobar.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dot/1.1.2/doT.min.js"></script>
-
+    
     <script src="../js/exercises.js"></script>
     <script src="../js/setup.js"></script>
     <script src="../js/menu.js"></script>
 
     <script type="text/javascript">
-        var CURRENT_SECTION = 7;
+        var CURRENT_SECTION = 6;
     </script>
 </body>
 

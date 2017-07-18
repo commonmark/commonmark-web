@@ -4,10 +4,10 @@
 <head>
 
     <meta charset="utf-8">
-    <title>Markdown Tutorial - Links</title>
+    <title>Markdown Tutorial - Images</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+    
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Mono' rel='stylesheet' type='text/css'>
     
@@ -32,18 +32,17 @@
                     <li class="current"><a href="javascript:goToSlide(0);">1</a></li>
                     <li><a href="javascript:goToSlide(1);">2</a></li>
                     <li><a href="javascript:goToSlide(2);">3</a></li>
-                    <li><a href="javascript:goToSlide(3);">4</a></li>
                 </ul>
             </div>
         </div>
 
-        <div class="section 0 links">
+        <div class="section images">
 
-            <div class="slide active">
+            <div class="slide 0 active">
                 <div class="container">
                     <div class="row noselect">
                         <div class="twelve columns">
-                            <div class="lesson-number">05</div>
+                            <div class="lesson-number">06</div>
                         </div>
                     </div>
                     <div class="row rowspacer">
@@ -51,13 +50,8 @@
                     </div>
                     <div class="row">
                         <div class="four columns">
-                            <h2>Links</h2>
-                            <p>
-                                Links can be either inline with the text, or placed at the bottom of the text as references.
-                            </p>
-                            <p>
-                                Link text is enclosed by square brackets <code>[]</code>, and for inline links, the link URL is enclosed by parens <code>()</code>.
-                            </p>
+                            <h2>Images</h2>
+                            <p>Images are almost identical to links, but an image starts with an exclamation point <code>!</code>.</p>
                             <p class="try-it">
                                 <button class="noselect button-primary button-next">Try It</button>
                             </p>
@@ -65,46 +59,63 @@
                         <div class="eight columns">
                             <div class="cd-product cd-container">
                                 <div class="cd-product-wrapper">
-                                    <div class="cd-product-description" style="font-size:18px">
-                                        [text](http://a.com)<br/>
+                                    <div class="cd-product-description" style="font-size:22px;">
+                                        ![alt](cat.png)<br/>
                                         <br/>
-                                        [text][id]<br/>
+                                        ![alt][id]<br/>
                                         &#8942;<br/>
-                                        [id]: http://b.org/ "title"<br/>
+                                        [id]: dog.jpg "title"<br/>
                                     </div>
                                     <ul>
-                                        
-                                        <li class="cd-single-point" style="top: -24px;left: 150px;">
+                                        <li class="cd-single-point" style="top: -24px;left:31px;">
                                             <a class="cd-img-replace" href="#">More</a>
                                             <div class="cd-more-info cd-left">
                                                 <p>
-                                                    You can also use relative URLs such as<br/><br/><code>/example.html</code>
+                                                    Alternate (alt) text is displayed when the image can't be shown, or for the visually impaired.
+                                                </p>
+                                                <p>
+                                                    It's fine to leave this blank but the <code>[]</code> is required.
                                                 </p>
                                                 <a href="#" class="cd-close-info cd-img-replace">Close</a>
                                             </div>
                                         </li>
 
-                                        <li class="cd-single-point" style="top: 20px;left:50px;">
+                                        <li class="cd-single-point" style="top: -24px;left:125px;">
                                             <a class="cd-img-replace" href="#">More</a>
                                             <div class="cd-more-info cd-left">
-                                                <p>Don’t put a space between any of the brackets.</p>
+                                                <p>
+                                                    You can also use complete URLs, such as<br/><br/> <code>http://a.com/dog.jpg</code>
+                                                </p>
                                                 <a href="#" class="cd-close-info cd-img-replace">Close</a>
                                             </div>
                                         </li>
 
-                                        <li class="cd-single-point" style="top: 112px;left:8px;">
+                                        <li class="cd-single-point" style="top:27px;left:65px;">
                                             <a class="cd-img-replace" href="#">More</a>
-                                            <div class="cd-more-info cd-top">
-                                                <p>The link definition can be placed anywhere after a blank line, but is generally near the bottom.</p>
+                                            <div class="cd-more-info cd-left">
+                                                <p>Make sure there are no spaces between the brackets.</p>
+                                                <a href="#" class="cd-close-info cd-img-replace">Close</a>
+                                            </div>
+                                        </li>
+
+                                        <li class="cd-single-point" style="top: 138px;left:12px;">
+                                            <a class="cd-img-replace" href="#">More</a>
+                                            <div class="cd-more-info cd-left">
                                                 <p>Definition identifiers may consist of letters, numbers, spaces, and punctuation. They are not case sensitive.</p>
+                                                <p>The link definition can be placed anywhere after a blank line, but is generally near the bottom.</p>
                                                 <a href="#" class="cd-close-info cd-img-replace">Close</a>
                                             </div>
                                         </li>
 
-                                        <li class="cd-single-point" style="top: 65px;left: 238px;">
+                                        <li class="cd-single-point" style="top: 138px;left:220px;">
                                             <a class="cd-img-replace" href="#">More</a>
                                             <div class="cd-more-info cd-top">
-                                                <p>The title of the link is optional.</p>
+                                                <p>
+                                                    The title of the image is optional.
+                                                </p>
+                                                <p>
+                                                    A title provides more textual detail about what the image shows or contains.
+                                                </p>
                                                 <a href="#" class="cd-close-info cd-img-replace">Close</a>
                                             </div>
                                         </li>
@@ -112,26 +123,26 @@
                                     </ul>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-            
-            
+
             <div class="slide 1">
                 <div class="container">
                     <div class="row exercise-instructions">
-                        <div class="twelve columns">
-                            <p>URLs may not become links in Markdown until enclosed in <code>&lt;</code> and <code>&gt;</code>. Turn this URL into a link:</p>
+                        <div class="twelve columns exercise-instructions">
+                            <p>Make this image appear – no need for alt text or title, leave those blank:</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="six columns">
-                            <textarea id="editor_3-1" class="editor">You can do anything at http://html5zombo.com</textarea>
+                            <textarea id="editor_7-1" class="editor">http://commonmark.org/help/images/favicon.png</textarea>
                         </div>
                         <div class="six columns">
-                            <div id="render_pad_3-1" class="render-pad"></div>
-                            <div id="html_pad_3-1" class="html-pad"></div>
+                            <div id="render_pad_7-1" class="render-pad"></div>
+                            <div id="html_pad_7-1" class="html-pad"></div>
                         </div>
                     </div>
                     <div class="row rowspacer">
@@ -139,18 +150,18 @@
                             &nbsp;
                         </div>
                         <div class="six columns generated-check">
-                            <label class="noselect"><input id="ck_show_html_3-1" type="checkbox" class="show-html" /> Show generated HTML</label>
+                            <label class="noselect"><input id="ck_show_html_7-1" type="checkbox" class="show-html" /> Show generated HTML</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="six columns">
                             <p>
-                                <button id="btn_answer_3-1" class="noselect button button-answer">Show Hint</button>
-                                <button id="btn_reset_3-1" class="noselect button button-reset">Reset</button>
+                                <button id="btn_answer_7-1" class="noselect button button-answer">Show Hint</button>
+                                <button id="btn_reset_7-1" class="noselect button button-reset">Reset</button>
                             </p>
                             <p>
-                                <button class="noselect button-primary button-next u-full-width">Next Exercise</button>                                
-                                <button class="noselect button-primary button-previous u-full-width">Links</button>
+                                <button class="noselect button-primary button-next u-full-width">Next Exercise</button>
+                                <button class="noselect button-primary button-previous u-full-width">Images</button>
                             </p>
                         </div>
                         <div class="six columns">
@@ -164,78 +175,36 @@
                 <div class="container">
                     <div class="row exercise-instructions">
                         <div class="twelve columns">
-                            <p>Link “University of Rwanda” to http://www.ur.ac.rw with an inline link:</p>
+                            <p>Add alt text of <b>Logo</b> and title of <b>Creative Commons licensed</b> to this image:</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="six columns">
-                            <textarea id="editor_3-2" class="editor">The University of Rwanda was formed in 2013 through the merger of Rwanda’s seven public institutions of higher education.</textarea>
+                            <textarea id="editor_7-2" class="editor">![][1]
+
+[1]: http://commonmark.org/help/images/favicon.png</textarea>
                         </div>
                         <div class="six columns">
-                            <div id="render_pad_3-2" class="render-pad"></div>
-                            <div id="html_pad_3-2" class="html-pad"></div>
+                            <div id="render_pad_7-2" class="render-pad"></div>
+                            <div id="html_pad_7-2" class="html-pad"></div>
                         </div>
                     </div>
                     <div class="row rowspacer">
                         <div class="six columns">
                             &nbsp;
-                        </div>
+                        </div>                            
                         <div class="six columns generated-check">
-                            <label class="noselect"><input id="ck_show_html_3-2" type="checkbox" class="show-html" /> Show generated HTML</label>
+                            <label class="noselect"><input id="ck_show_html_7-2" type="checkbox" class="show-html" /> Show generated HTML</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="six columns">
                             <p>
-                                <button id="btn_answer_3-2" class="noselect button button-answer">Show Hint</button>
-                                <button id="btn_reset_3-2" class="noselect button button-reset">Reset</button>
-                            </p>
+                                <button id="btn_answer_7-2" class="noselect button button-answer">Show Hint</button>
+                                <button id="btn_reset_7-2" class="noselect button button-reset">Reset</button>
+                            </p>                            
                             <p>
-                                <button class="noselect button-primary button-next u-full-width">Next Exercise</button>
-                                <button class="noselect button-primary button-previous u-full-width">Previous Exercise</button>
-                            </p>
-                        </div>
-                        <div class="six columns">
-                            <!-- empty -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="slide 3">
-                <div class="container">
-                    <div class="row exercise-instructions">
-                        <div class="twelve columns">
-                            <p>Link both of the words “hurricane” to the Wikipedia entry at https://goo.gl/YEEHP0 with a reference style link:
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="six columns">
-                            <textarea id="editor_3-3" class="editor">Hurricane Erika was the strongest and longest-lasting tropical cyclone in the 1997 Atlantic hurricane season.
-                            </textarea>
-                        </div>
-                        <div class="six columns">
-                            <div id="render_pad_3-3" class="render-pad"></div>
-                            <div id="html_pad_3-3" class="html-pad"></div>
-                        </div>
-                    </div>
-                    <div class="row rowspacer rowspacer">
-                        <div class="six columns">
-                            &nbsp;
-                        </div>
-                        <div class="six columns generated-check">
-                           <label class="noselect"><input id="ck_show_html_3-3" type="checkbox" class="show-html" /> Show generated HTML</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="six columns">
-                            <p>
-                                <button id="btn_answer_3-3" class="noselect button button-answer">Show Hint</button>
-                                <button id="btn_reset_3-3" class="noselect button button-reset">Reset</button>
-                            </p>
-                            <p>
-                                <a href="06-images.html" id="btn_answer_3-3" class="noselect button button-primary button-next-lesson u-full-width">Images</a>
+                                <a href="09-code.html" id="btn_answer_7-2" class="noselect button button-primary button-next-lesson u-full-width">Code</a>
                                 <button class="noselect button-primary button-previous u-full-width">Previous Exercise</button>
                             </p>
                         </div>
@@ -263,7 +232,7 @@
     <script src="../js/menu.js"></script>
 
     <script type="text/javascript">
-        var CURRENT_SECTION = 4;
+        var CURRENT_SECTION = 7;
     </script>
 </body>
 

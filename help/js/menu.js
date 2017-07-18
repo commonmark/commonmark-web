@@ -32,33 +32,33 @@ $(document).ready(function() {
 				</a> \
 			</li> \
 			<li> \
-				<a href="05-links.html" class="noselect {{? it.section == 4 }}is-selected{{?}}"> \
-					<span class="cd-dot"></span> \
-					<span class="cd-label">Links</span> \
-				</a> \
-			</li> \
-			<li> \
-				<a href="06-images.html" class="noselect {{? it.section == 5 }}is-selected{{?}}"> \
-					<span class="cd-dot"></span> \
-					<span class="cd-label">Images</span> \
-				</a> \
-			</li> \
-			<li> \
-				<a href="07-code.html" class="noselect {{? it.section == 6 }}is-selected{{?}}"> \
-					<span class="cd-dot"></span> \
-					<span class="cd-label">Code</span> \
-				</a> \
-			</li> \
-			<li> \
-				<a href="08-blockquotes.html" class="noselect {{? it.section == 7 }}is-selected{{?}}"> \
+				<a href="05-blockquotes.html" class="noselect {{? it.section == 4 }}is-selected{{?}}"> \
 					<span class="cd-dot"></span> \
 					<span class="cd-label">Blockquotes</span> \
 				</a> \
 			</li> \
 			<li> \
-				<a href="09-lists.html" class="noselect {{? it.section == 8 }}is-selected{{?}}"> \
+				<a href="06-lists.html" class="noselect {{? it.section == 5 }}is-selected{{?}}"> \
 					<span class="cd-dot"></span> \
 					<span class="cd-label">Lists</span> \
+				</a> \
+			</li> \
+			<li> \
+				<a href="07-links.html" class="noselect {{? it.section == 6 }}is-selected{{?}}"> \
+					<span class="cd-dot"></span> \
+					<span class="cd-label">Links</span> \
+				</a> \
+			</li> \
+			<li> \
+				<a href="08-images.html" class="noselect {{? it.section == 7 }}is-selected{{?}}"> \
+					<span class="cd-dot"></span> \
+					<span class="cd-label">Images</span> \
+				</a> \
+			</li> \
+			<li> \
+				<a href="09-code.html" class="noselect {{? it.section == 8 }}is-selected{{?}}"> \
+					<span class="cd-dot"></span> \
+					<span class="cd-label">Code</span> \
 				</a> \
 			</li> \
 			<li> \

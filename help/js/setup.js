@@ -94,7 +94,7 @@ $(document).ready(function() {
 	});
     
 	var interestPointsSlide = $(".slide:eq(0)");
-    //To eliminate the flicker on iOS when tapping
+    // to eliminate the flicker on iOS when tapping
 	interestPointsSlide.css("-webkit-tap-highlight-color", "transparent"); 
 	interestPointsSlide.on('click', function(event) {
 		closeInterestPoint(event);
