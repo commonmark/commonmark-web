@@ -1,6 +1,6 @@
 /* 
 * Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
+* https://www.opensource.org/licenses/mit-license.php
 * 4/18/2015
 */
 	

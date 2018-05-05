@@ -1,6 +1,6 @@
 /* 
 * Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
+* https://www.opensource.org/licenses/mit-license.php
 * 4/18/2015
 */
 
@@ -59,8 +59,8 @@ var exercises = {
 		correctMd: "1986\\. What a great season. Arguably the finest season in the history of the franchise."
 	},     
 	"6-1": {
-		answer: "<p>You can do anything at <a href=\"http://html5zombo.com\">http://html5zombo.com</a></p>",
-		correctMd: "You can do anything at <http://html5zombo.com>"
+		answer: "<p>You can do anything at <a href=\"https://html5zombo.com\">https://html5zombo.com</a></p>",
+		correctMd: "You can do anything at <https://html5zombo.com>"
 	}, 
 	"6-2": {
 		answer: "<p>The <a href=\"http://www.ur.ac.rw\">University of Rwanda</a> was formed in 2013 through the merger of Rwanda’s seven public institutions of higher education.</p>",
@@ -71,12 +71,12 @@ var exercises = {
 		correctMd: "[Hurricane][1] Erika was the strongest and longest-lasting tropical cyclone in the 1997 Atlantic [hurricane][1] season.\n\n[1]:https://goo.gl/YEEHP0"
 	}, 
 	"7-1": {
-		answer: "<p><img src=\"http://commonmark.org/help/images/favicon.png\" alt=\"\"></p>",
-		correctMd: "![](http://commonmark.org/help/images/favicon.png)"
+		answer: "<p><img src=\"https://commonmark.org/help/images/favicon.png\" alt=\"\"></p>",
+		correctMd: "![](https://commonmark.org/help/images/favicon.png)"
 	}, 
 	"7-2": {
-		answer: "<p><img src=\"http://commonmark.org/help/images/favicon.png\" alt=\"Logo\" title=\"Creative Commons licensed\"></p>",
-		correctMd: "![Logo][1]\n\n[1]: http://commonmark.org/help/images/favicon.png \"Creative Commons licensed\""
+		answer: "<p><img src=\"https://commonmark.org/help/images/favicon.png\" alt=\"Logo\" title=\"Creative Commons licensed\"></p>",
+		correctMd: "![Logo][1]\n\n[1]: https://commonmark.org/help/images/favicon.png \"Creative Commons licensed\""
 	}, 
 	"8-1": {
 		answer: "<p>When <code>x = 3</code>, that means <code>x + 2 = 5</code></p>",
