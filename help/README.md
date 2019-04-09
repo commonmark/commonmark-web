@@ -4,7 +4,7 @@
 
 Everything is plain old HTML/CSS/Javascript with jQuery. Just download and open in a browser. Works on all screen sizes, from 30" to teeny-tiny iPhone 4 size.
 
-##Projects used
+## Projects used
 Big thanks to:
 - [Markdown Tutorial](https://markdowntutorial.com/)
 - [Skeleton](http://getskeleton.com/)
@@ -15,9 +15,9 @@ Big thanks to:
 - [highlight.js](https://github.com/isagalaev/highlight.js)
 - [CodyHouse](https://codyhouse.co)
 
-##Compatibility
+## Compatibility
 All modern browsers, IE10+
 
-##License:
+## License:
 Open Source MIT.
 https://opensource.org/licenses/MIT
