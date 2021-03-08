@@ -67,8 +67,8 @@ var exercises = {
 		correctMd: "The [University of Rwanda](http://www.ur.ac.rw) was formed in 2013 through the merger of Rwanda’s seven public institutions of higher education."
 	}, 
 	"6-3": {
-		answer: "<p><a href=\"https://w.wiki/qYn\">Hurricane</a> Erika was the strongest and longest-lasting tropical cyclone in the 1997 Atlantic <a href=\"https://goo.gl/YEEHP0\">hurricane</a> season.</p>",
-		correctMd: "[Hurricane][1] Erika was the strongest and longest-lasting tropical cyclone in the 1997 Atlantic [hurricane][1] season.\n\n[1]:https://goo.gl/YEEHP0"
+		answer: "<p><a href=\"https://w.wiki/qYn\">Hurricane</a> Erika was the strongest and longest-lasting tropical cyclone in the 1997 Atlantic <a href=\"https://w.wiki/qYn\">hurricane</a> season.</p>",
+		correctMd: "[Hurricane][1] Erika was the strongest and longest-lasting tropical cyclone in the 1997 Atlantic [hurricane][1] season.\n\n[1]:https://w.wiki/qYn"
 	}, 
 	"7-1": {
 		answer: "<p><img src=\"https://commonmark.org/help/images/favicon.png\" alt=\"\"></p>",
