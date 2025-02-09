@@ -56,7 +56,7 @@
                     Because there is no unambiguous spec, implementations have diverged considerably over the last 10 years. As a result, users are often surprised to find that a document that renders one way on one system (say, a GitHub wiki) renders differently on another (say, converting to docbook using Pandoc). To make matters worse, because nothing in Markdown counts as a “syntax error,” the divergence often isn’t discovered right away.
                 </p>
                 <p>
-                    There’s no standard test suite for Markdown;  <a href="https://github.com/michelf/mdtest/">MDTest</a> is the closest thing we have. The only way to resolve Markdown ambiguities and inconsistencies is <a href="https://johnmacfarlane.net/babelmark2/">Babelmark</a>, which compares the output of 20+ implementations of Markdown against each other to see if a consensus emerges.
+                    There’s no standard test suite for Markdown;  <a href="https://github.com/michelf/mdtest/">MDTest</a> is the closest thing we had, and is now obsolete. The best current way to resolve Markdown ambiguities and inconsistencies is <a href="https://babelmark.github.io/">Babelmark 3</a>, which compares the output of 20+ implementations of Markdown against each other to see if a consensus emerges.
                 </p>
                 <p>
                     We propose a <strong>standard, unambiguous syntax specification for Markdown</strong>, along with a <strong>suite of comprehensive tests</strong> to validate Markdown implementations against this specification. We believe this is necessary, even essential, for the future of Markdown.
